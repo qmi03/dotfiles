@@ -57,16 +57,65 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
+alias zshconfig="nvim ~/.zshrc"
+
 alias ls='ls --color'
+alias lsa='ls -lAh'
+
 alias mamba="micromamba"
+
+alias oke="echo oke"
+alias cool="echo cool"
+
+alias htop="btop"
+alias cat='bat -p -P'
+
+alias antlr4py3='java org.antlr.v4.Tool -Dlanguage=Python3 -o target'
+alias installdir='dirname "$(pwd)"'
+alias pygrun='python3 "$(installdir)"/bin/pygrun'
+alias antlr4='java -jar /usr/local/lib/antlr-4.9.2-complete.jar -o target'
+alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
 # Software initialize from here
 
+# ANTLR
+export ANTLR_JAR=/usr/local/lib/antlr-4.9.2-complete.jar
+export CLASSPATH=".:/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH"
 
+# nvm customization
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# openjdk
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+# Haskell
+[ -f "/Users/phamvoquangminh/.ghcup/env" ] && source "/Users/phamvoquangminh/.ghcup/env" # ghcup-env
+
+# Julia
+export PATH="/Applications/Julia-1.8.app/Contents/Resources/julia/bin:$PATH"
+
+# Created by `pipx` on 2024-01-25 21:56:41
+export PATH="$PATH:/Users/phamvoquangminh/.local/bin"
+
+# cargo
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba init' !!
@@ -80,3 +129,7 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

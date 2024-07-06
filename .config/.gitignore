@@ -1,0 +1,9 @@
+iterm2/
+nvim.bak/
+**/__pycache__/
+node_modules
+ghc/
+neofetch/
+wireshark/
+zed/
+yarn/
