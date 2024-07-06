@@ -74,6 +74,7 @@ alias mamba="micromamba"
 
 # Shell integrations
 eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 # Software initialize from here
