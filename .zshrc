@@ -13,7 +13,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Init homebrew
 eval $(/opt/homebrew/bin/brew shellenv)
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/tokyonight_storm.qmi.toml)"
-
 # Add zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -25,9 +24,14 @@ zinit light MichaelAquilina/zsh-you-should-use
 zinit snippet OMZP::git
 zinit snippet OMZP::tmux
 zinit snippet OMZP::command-not-found
+
+# Created by `pipx` on 2024-01-25 21:56:41
+export PATH="$PATH:/Users/phamvoquangminh/.local/bin"
+eval $(thefuck --alias)
 zinit snippet OMZP::thefuck
 
 autoload -U compinit && compinit
+
 
 zinit cdreplay -q
 
@@ -93,6 +97,14 @@ fi
 
 # Software initialize from here
 
+# Ollama
+export OLLAMA_HOST=localhost:11435
+# postgresql homebrew
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@16/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@16/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@16/lib/pkgconfig"
+
 # ANTLR
 export ANTLR_JAR=/usr/local/lib/antlr-4.9.2-complete.jar
 export CLASSPATH=".:/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH"
@@ -102,8 +114,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# openjdk
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+## openjdk
+# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # Haskell
 [ -f "/Users/phamvoquangminh/.ghcup/env" ] && source "/Users/phamvoquangminh/.ghcup/env" # ghcup-env
@@ -111,8 +123,6 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # Julia
 export PATH="/Applications/Julia-1.8.app/Contents/Resources/julia/bin:$PATH"
 
-# Created by `pipx` on 2024-01-25 21:56:41
-export PATH="$PATH:/Users/phamvoquangminh/.local/bin"
 
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -133,3 +143,8 @@ unset __mamba_setup
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# <<< JVM installed by coursier <<<
+export JAVA_HOME="/Users/phamvoquangminh/Library/Caches/Coursier/arc/https/github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11%252B28/OpenJDK11-jdk_x64_mac_hotspot_11_28.tar.gz/jdk-11+28/Contents/Home"
+# <<< JVM installed by coursier <<<
+
