@@ -27,6 +27,7 @@
             pkgs.bat
             pkgs.ripgrep
             pkgs.lazygit
+            pkgs.thefuck
           ];
         fonts.packages = [
           (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
