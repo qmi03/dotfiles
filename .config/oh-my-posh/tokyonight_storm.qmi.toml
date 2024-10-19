@@ -21,7 +21,7 @@ console_title_template = ' {{ .Folder }} :: {{if .Root}}Admin{{end}}'
   [[blocks.segments]]
     type = 'path'
     style = 'plain'
-    template = '<b>{{ .Path }}</b> <p:light-sky-blue></>'
+    template = '<b>{{ .Path }}</b> <p:light-sky-blue> </>'
     background = ''
     foreground = 'p:terminal-magenta'
     Text = ''
@@ -29,7 +29,9 @@ console_title_template = ' {{ .Folder }} :: {{if .Root}}Admin{{end}}'
     NameLength = 0
 
     [blocks.segments.properties]
-      style = 'folder'
+      folder_icon = '....'
+      home_icon = '~'
+      style = 'agnoster_short'
 
   [[blocks.segments]]
     type = 'git'
@@ -44,7 +46,15 @@ console_title_template = ' {{ .Folder }} :: {{if .Root}}Admin{{end}}'
 
     [blocks.segments.properties]
       branch_icon = ' '
-      fetch_status = true
+      cherry_pick_icon = ' '
+      commit_icon = ' '
+      fetch_status = false
+      fetch_upstream_icon = false
+      merge_icon = ' '
+      no_commits_icon = ' '
+      rebase_icon = ' '
+      revert_icon = ' '
+      tag_icon = ' '
 
   [[blocks.segments]]
     type = 'status'
