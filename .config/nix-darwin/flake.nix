@@ -28,6 +28,9 @@
             pkgs.ripgrep
             pkgs.lazygit
             pkgs.thefuck
+            pkgs.spicetify-cli
+            pkgs.tldr
+            pkgs.speedtest-cli
           ];
         fonts.packages = [
           (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
@@ -42,6 +45,10 @@
             "obsidian"
             "wezterm@nightly"
             "arc"
+            "openkey"
+            "docker"
+            "qbittorrent"
+            "onlyoffice"
           ];
           masApps = {
             # Example
