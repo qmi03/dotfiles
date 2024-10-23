@@ -10,6 +10,10 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+# Hook direnv
+export DIRENV_LOG_FORMAT=""
+eval "$(direnv hook zsh)"
+
 # Init homebrew
 eval $(/opt/homebrew/bin/brew shellenv)
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/tokyonight_storm.qmi.toml)"
@@ -66,8 +70,6 @@ alias zshconfig="nvim ~/.zshrc"
 alias ls='ls --color'
 alias lsa='ls -lAh'
 
-alias mamba="micromamba"
-
 alias oke="echo oke"
 alias cool="echo cool"
 
@@ -109,11 +111,6 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@16/lib/pkgconfig"
 export ANTLR_JAR=/usr/local/lib/antlr-4.9.2-complete.jar
 export CLASSPATH=".:/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH"
 
-# nvm customization
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 ## openjdk
 # export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
@@ -123,22 +120,8 @@ export NVM_DIR="$HOME/.nvm"
 # Julia
 export PATH="/Applications/Julia-1.8.app/Contents/Resources/julia/bin:$PATH"
 
-
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE='/opt/homebrew/bin/micromamba';
-export MAMBA_ROOT_PREFIX='/Users/phamvoquangminh/micromamba';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
-else
-    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
-fi
-unset __mamba_setup
-# <<< mamba initialize <<<
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
