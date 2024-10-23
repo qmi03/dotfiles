@@ -15,23 +15,29 @@
         nixpkgs.config.allowUnfree = true;
         # List packages installed in system profile. To search by name, run:
         # $ nix-env -qaP | grep wget
-        environment.systemPackages =
-          [
-            pkgs.neovim
-            pkgs.mkalias
-            pkgs.tmux
-            pkgs.pipx
-            pkgs.zoxide
-            pkgs.stow
-            pkgs.fzf
-            pkgs.bat
-            pkgs.ripgrep
-            pkgs.lazygit
-            pkgs.thefuck
-            pkgs.spicetify-cli
-            pkgs.tldr
-            pkgs.speedtest-cli
-          ];
+        environment.systemPackages = with pkgs;[
+          neovim
+          mkalias
+          tmux
+          pipx
+          zoxide
+          stow
+          fzf
+          bat
+          ripgrep
+          lazygit
+          oh-my-posh
+          thefuck
+          spicetify-cli
+          tldr
+          speedtest-cli
+          julia_19-bin
+          ghc
+          direnv
+          deno
+          uv
+          nodejs
+        ];
         fonts.packages = [
           (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
         ];
@@ -39,6 +45,7 @@
           enable = true;
           brews = [
             "mas"
+            "mactop"
           ];
           casks = [
             "iina"
@@ -49,6 +56,8 @@
             "docker"
             "qbittorrent"
             "onlyoffice"
+            "keycastr"
+            "sioyek"
           ];
           masApps = {
             # Example
@@ -89,6 +98,17 @@
         # Create /etc/zshrc that loads the nix-darwin environment.
         programs.zsh.enable = true; # default shell on catalina
         # programs.fish.enable = true;
+
+        programs.direnv = {
+          package = pkgs.direnv;
+          silent = false;
+          loadInNixShell = true;
+          direnvrcExtra = "";
+          nix-direnv = {
+            enable = true;
+            package = pkgs.nix-direnv;
+          };
+        };
 
         # Set Git commit hash for darwin-version.
         system.configurationRevision = self.rev or self.dirtyRev or null;
