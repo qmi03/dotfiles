@@ -6,7 +6,6 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
@@ -19,7 +18,6 @@
           neovim
           mkalias
           tmux
-          pipx
           zoxide
           stow
           fzf
@@ -37,6 +35,8 @@
           deno
           uv
           nodejs
+          pnpm
+          tree
         ];
         fonts.packages = [
           (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
