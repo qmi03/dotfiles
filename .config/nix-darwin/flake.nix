@@ -15,28 +15,37 @@
         # List packages installed in system profile. To search by name, run:
         # $ nix-env -qaP | grep wget
         environment.systemPackages = with pkgs;[
-          neovim
-          mkalias
-          tmux
-          zoxide
-          stow
-          fzf
           bat
-          ripgrep
-          lazygit
-          oh-my-posh
-          thefuck
-          spicetify-cli
-          tldr
-          speedtest-cli
-          julia_19-bin
-          ghc
-          direnv
+          cmake
           deno
-          uv
+          direnv
+          fastfetch
+          fzf
+          ghc
+          julia_19-bin
+          lazygit
+          mkalias
+          micromamba
+          mpich
+          neovim
           nodejs
+          oh-my-posh
+          pkg-config
+          pixi
           pnpm
+          qemu
+          ripgrep
+          speedtest-cli
+          spicetify-cli
+          stow
+          thefuck
+          tldr
+          tmux
           tree
+          uv
+          w3m
+          zig
+          zoxide
         ];
         fonts.packages = [
           (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
@@ -48,20 +57,24 @@
             "mactop"
           ];
           casks = [
-            "iina"
-            "obsidian"
-            "wezterm@nightly"
             "arc"
-            "openkey"
+            "betterdisplay"
             "docker"
-            "qbittorrent"
-            "onlyoffice"
+            "iina"
             "keycastr"
+            "little-snitch"
+            "obsidian"
+            "onlyoffice"
+            "openkey"
+            "qbittorrent"
+            "raycast"
             "sioyek"
+            "wezterm@nightly"
           ];
           masApps = {
             # Example
             # "Yoink": id
+            "Focus" = 1258530160;
           };
           onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
