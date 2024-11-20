@@ -140,17 +140,6 @@ console_title_template = ' {{ .Folder }} :: {{if .Root}}Admin{{end}}'
       style = "austin"
       always_enabled = true
 
-  [[blocks.segments]]
-    type = 'command'
-    style = 'plain'
-    foreground = 'p:white-blue'
-    Text = ''
-    Duration = 0
-    NameLength = 0
-
-    [blocks.segments.properties]
-      command = 'git log --pretty=format:%cr -1 || date +%H:%M:%S'
-      shell = 'zsh'
 
 [[blocks]]
   type = 'prompt'
