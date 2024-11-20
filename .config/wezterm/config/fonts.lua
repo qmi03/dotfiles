@@ -3,7 +3,7 @@ local platform = require('utils.platform')
 
 -- local font = 'Maple Mono SC NF'
 local font_family = 'JetBrainsMonoNL Nerd Font'
-local font_size = platform.is_mac and 18 or 9
+local font_size = platform.is_mac and 16 or 9
 
 return {
    font = wezterm.font({
