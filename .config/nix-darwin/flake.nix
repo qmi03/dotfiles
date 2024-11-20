@@ -16,6 +16,7 @@
         # $ nix-env -qaP | grep wget
         environment.systemPackages = with pkgs;[
           bat
+          btop
           cmake
           deno
           direnv
@@ -52,17 +53,22 @@
         ];
         homebrew = {
           enable = true;
+          taps = [
+            "FelixKratz/formulae"
+            "nikitabobko/tap"
+          ];
           brews = [
             "mas"
-            "mactop"
           ];
           casks = [
+            "aerospace"
             "arc"
             "betterdisplay"
             "docker"
+            "dozer"
             "iina"
             "keycastr"
-            "little-snitch"
+            "lulu"
             "obsidian"
             "onlyoffice"
             "openkey"
@@ -75,6 +81,7 @@
             # Example
             # "Yoink": id
             "Focus" = 1258530160;
+            "Plain Text Editor" = 1572202501;
           };
           onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
