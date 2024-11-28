@@ -18,15 +18,14 @@
           bat
           btop
           cmake
-          deno
           direnv
           fastfetch
           fzf
+          gradle_7
           ghc
           julia_19-bin
           lazygit
           mkalias
-          micromamba
           mpich
           neovim
           nodejs
@@ -56,14 +55,20 @@
           taps = [
             "FelixKratz/formulae"
             "nikitabobko/tap"
+            "nextfire/tap"
           ];
           brews = [
             "mas"
+            "swiftformat"
+            "deno"
+            "sqlite"
+            "apple-music-discord-rpc"
           ];
           casks = [
             "aerospace"
             "arc"
             "betterdisplay"
+            "bettertouchtool"
             "docker"
             "dozer"
             "iina"

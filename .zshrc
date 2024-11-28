@@ -157,4 +157,4 @@ export JAVA_HOME="/Users/phamvoquangminh/Library/Caches/Coursier/arc/https/githu
 # Zig
 export PATH="$HOME/zig-bootstrap-0.14.0-dev.2064+b5cafe223/out/zig-aarch64-macos-none-baseline:$PATH"
 
-# eval "$(pixi completion --shell zsh)"
+eval "$(pixi completion --shell zsh)"
