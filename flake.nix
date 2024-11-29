@@ -12,12 +12,12 @@
 
     nix-darwin.url = "github:lnl7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-    homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
     nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware, nix-homebrew, ... }:
 
     let
       mkDarwinSiliconSystem = import ./hosts/darwin/silicon/default.nix;
@@ -43,7 +43,7 @@
           ./modules/nixos/nvidia.nix
         ];
       };
-      darwinConfigurations."silicon" = mkDarwinSystem {
+      darwinConfigurations."silicon" = mkDarwinSiliconSystem {
         inherit inputs;
         modules = sharedModules ++ [
           nix-homebrew.darwinModules.nix-homebrew
@@ -51,5 +51,4 @@
         ];
       };
     };
-};
 }
