@@ -56,6 +56,7 @@
             "FelixKratz/formulae"
             "nikitabobko/tap"
             "nextfire/tap"
+            "zegervdv/zathura"
           ];
           brews = [
             "mas"
@@ -63,6 +64,9 @@
             "deno"
             "sqlite"
             "apple-music-discord-rpc"
+            "exercism"
+            "unisonlang"
+            "zathura"
           ];
           casks = [
             "aerospace"
@@ -162,7 +166,7 @@
               enableRosetta = true;
 
               # User owning the Homebrew prefix
-              user = "phamvoquangminh";
+              user = "qmi";
 
               # Automatically migrate existing Homebrew installations
               autoMigrate = true;

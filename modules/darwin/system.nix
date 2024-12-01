@@ -1,4 +1,6 @@
 { config, pkgs, ... }: {
+  system.stateVersion = 5;
+  nixpkgs.hostPlatform = "aarch64-darwin";
   system.activationScripts.applications.text =
     let
       env = pkgs.buildEnv {

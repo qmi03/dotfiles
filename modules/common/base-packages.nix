@@ -7,7 +7,6 @@
       wget
       bat
       btop
-
       cmake
       direnv
       fastfetch
