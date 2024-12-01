@@ -10,7 +10,7 @@
     ./nix.nix
     ./ripgrep.nix
     ./timezone.nix
-    ./zsh.nix
+    ./shell.nix
   ];
 
   config.home-manager = {

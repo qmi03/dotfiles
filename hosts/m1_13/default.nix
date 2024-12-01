@@ -11,7 +11,7 @@ inputs.nix-darwin.lib.darwinSystem {
       enableRosetta = true;
 
       # User owning the Homebrew prefix
-      user = globals.username;
+      user = globals.user;
 
       # Automatically migrate existing Homebrew installations
       autoMigrate = true;
