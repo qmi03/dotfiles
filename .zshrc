@@ -33,7 +33,7 @@ zinit snippet OMZP::git
 zinit snippet OMZP::tmux
 zinit snippet OMZP::command-not-found
 
-export PATH="$PATH:/Users/phamvoquangminh/.local/bin"
+export PATH="$PATH:/Users/qmi/.local/bin"
 
 eval $(thefuck --alias)
 zinit snippet OMZP::thefuck
@@ -138,7 +138,7 @@ export CLASSPATH=".:/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH"
 # export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # Haskell
-[ -f "/Users/phamvoquangminh/.ghcup/env" ] && source "/Users/phamvoquangminh/.ghcup/env" # ghcup-env
+[ -f "/Users/qmi/.ghcup/env" ] && source "/Users/qmi/.ghcup/env" # ghcup-env
 
 # Julia
 export PATH="/Applications/Julia-1.8.app/Contents/Resources/julia/bin:$PATH"
@@ -151,7 +151,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # <<< JVM installed by coursier <<<
-export JAVA_HOME="/Users/phamvoquangminh/Library/Caches/Coursier/arc/https/github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11%252B28/OpenJDK11-jdk_x64_mac_hotspot_11_28.tar.gz/jdk-11+28/Contents/Home"
+export JAVA_HOME="/Users/qmi/Library/Caches/Coursier/arc/https/github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11%252B28/OpenJDK11-jdk_x64_mac_hotspot_11_28.tar.gz/jdk-11+28/Contents/Home"
 # <<< JVM installed by coursier <<<
 
 # Zig
