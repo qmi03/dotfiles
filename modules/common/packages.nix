@@ -1,5 +1,8 @@
 { config, pkgs, ... }: {
   home-manager.users.${config.user}.home.packages = with pkgs; [
+    oh-my-posh
+    direnv
+    lazygit
     bat
     stow
     tmux

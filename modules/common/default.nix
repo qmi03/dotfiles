@@ -2,6 +2,7 @@
   imports = [
     ./base-packages.nix
     ./bat.nix
+    ./packages.nix
     ./bottom.nix
     ./direnv.nix
     ./fonts.nix
