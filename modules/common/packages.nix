@@ -5,7 +5,6 @@
     direnv
     lazygit
     bat
-    stow
     tmux
     tree
     ripgrep
