@@ -12,6 +12,7 @@
     ./ripgrep.nix
     ./timezone.nix
     ./shell.nix
+    ./dotfiles.nix
   ];
 
   config.home-manager = {

@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   home-manager.users.${config.user}.home.packages = with pkgs; [
-    oh-my-posh
+    # Dev
+    ## Tools
     direnv
     lazygit
     bat
@@ -10,23 +11,31 @@
     ripgrep
     fzf
     btop
-    mkalias
     fastfetch
+    oh-my-posh
+    zoxide
+    ## Programming Languages
+    # typst
+    typst
+    ### Java
     gradle_7
+    ### Haskell
     ghc
+    ### Julia
     julia_19-bin
-    lazygit
+    ### C/C++/Python
     mpich
-    nodejs
     pixi
+    uv
+    ### Javascript
+    nodejs
     pnpm
+    ### zig
+    zig
+    # General
     speedtest-cli
     spicetify-cli
     thefuck
-    uv
     w3m
-    zig
-    zoxide
-    typst
   ];
 }

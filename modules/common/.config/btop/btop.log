@@ -1,0 +1,12 @@
+
+2024/11/12 (17:31:46) | ===> btop++ v.1.4.0
+2024/11/12 (17:31:46) | WARNING: Failed to set locale UTF-8 continuing anyway.
+
+2024/11/12 (17:36:40) | ===> btop++ v.1.4.0
+2024/11/12 (17:36:40) | WARNING: Failed to set locale UTF-8 continuing anyway.
+
+2024/11/12 (20:09:13) | ===> btop++ v.1.4.0
+2024/11/12 (20:09:13) | WARNING: Failed to set locale UTF-8 continuing anyway.
+
+2024/11/13 (08:03:10) | ===> btop++ v.1.4.0
+2024/11/13 (08:03:10) | ERROR: Exception during Config::unlock() : unordered_map::at: key not found

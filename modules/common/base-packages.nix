@@ -10,7 +10,7 @@
       pkg-config
       qemu
       tldr
-
+      mkalias
     ];
 
     variables = {
