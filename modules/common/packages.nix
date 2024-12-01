@@ -7,7 +7,6 @@
     ripgrep
     fzf
     btop
-    direnv
     mkalias
     fastfetch
     gradle_7
@@ -16,7 +15,6 @@
     lazygit
     mpich
     nodejs
-    oh-my-posh
     pixi
     pnpm
     speedtest-cli

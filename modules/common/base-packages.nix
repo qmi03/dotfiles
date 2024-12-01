@@ -11,6 +11,9 @@
       qemu
       tldr
 
+      oh-my-posh
+      direnv
+      lazygit
     ];
 
     variables = {
