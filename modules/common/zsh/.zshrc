@@ -77,8 +77,7 @@ alias lsa='ls -lAh'
 alias oke="echo oke"
 alias cool="echo cool"
 
-alias htop="btop"
-alias cat='bat -p -P'
+# alias cat='bat -p -P'
 
 alias antlr4py3='java org.antlr.v4.Tool -Dlanguage=Python3 -o target'
 alias installdir='dirname "$(pwd)"'

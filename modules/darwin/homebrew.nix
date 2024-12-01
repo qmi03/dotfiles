@@ -14,6 +14,7 @@
       "apple-music-discord-rpc"
       "exercism"
       "unisonlang"
+      "postgresql@17"
     ];
     casks = [
       "aerospace"

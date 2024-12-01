@@ -20,11 +20,11 @@ inputs.nix-darwin.lib.darwinSystem {
   modules = [
     globals
     inputs.home-manager.darwinModules.home-manager
-    ../../modules/darwin
     {
       home-manager.users.${globals.user}.imports = [
         inputs.nix-index-database.hmModules.nix-index
       ];
     }
+    ../../modules/darwin
   ];
 }

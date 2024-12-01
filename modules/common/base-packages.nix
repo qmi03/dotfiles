@@ -36,6 +36,7 @@
       w3m
       zig
       zoxide
+      typst
     ];
 
     variables = {
