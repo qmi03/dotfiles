@@ -3,52 +3,46 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-darwin.url = "github:lnl7/nix-darwin";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    # darwin
+    nix-darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
-    nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
+    apple-silicon-support = {
+      url = "github:oliverbestmann/nixos-apple-silicon";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    mac-app-util = {
+      url = "github:hraban/mac-app-util";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware, nix-homebrew, ... }:
+  outputs = inputs:
 
     let
-      mkDarwinSiliconSystem = import ./hosts/darwin/silicon/default.nix;
-      mkNixOSSystem = import ./hosts/nixos/home_pc/default.nix;
-      sharedModules = [
-        ./modules/common.nix
-        home-manager.darwinModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.phamvoquangminh = import ./home.nix;
-          };
-        }
-      ];
+      globals = { user = "qmi"; };
     in
+    rec
     {
-      nixosConfigurations."home_pc" = mkNixOSSystem {
-        inherit inputs;
-        modules = sharedModules ++ [
-          nixos-hardware.nixosModules.common-gpu-nvidia
-          ./modules/nixos/desktop.nix
-          ./modules/nixos/nvidia.nix
-        ];
+      nixosConfigurations = {
+        home_desktop = import ./hosts/home_desktop { inherit inputs globals; };
       };
-      darwinConfigurations."silicon" = mkDarwinSiliconSystem {
-        inherit inputs;
-        modules = sharedModules ++ [
-          nix-homebrew.darwinModules.nix-homebrew
-          ./modules/darwin/homebrew.nix
-        ];
+      darwinConfigurations = {
+        m1_13 = import ./hosts/m1_13 { inherit inputs globals; };
+      };
+      homeConfigurations = {
+        home_desktop = nixosConfigurations.home_desktop.config.home-manager.users.${globals.user}.home;
+        m1_13 = darwinConfigurations.m1_13.config.home-manager.users.${globals.user}.home;
       };
     };
 }
