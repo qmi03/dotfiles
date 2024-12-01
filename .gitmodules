@@ -1,3 +1,0 @@
-[submodule "/Users/qmi/dotfiles/modules/common/.config/nvim"]
-	path = /Users/qmi/dotfiles/modules/common/.config/nvim
-	url = https://github.com/qmi03/nvim_config.git
