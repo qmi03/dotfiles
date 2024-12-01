@@ -35,8 +35,6 @@ zinit snippet OMZP::command-not-found
 
 export PATH="$PATH:/Users/qmi/.local/bin"
 
-eval $(thefuck --alias)
-zinit snippet OMZP::thefuck
 
 autoload -U compinit && compinit
 

@@ -34,7 +34,6 @@
     # General
     speedtest-cli
     spicetify-cli
-    thefuck
     w3m
   ];
 }
