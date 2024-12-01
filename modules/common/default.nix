@@ -5,7 +5,7 @@
     ./bottom.nix
     ./direnv.nix
     ./fonts.nix
-    # ./git.nix
+    ./git.nix
     ./nix-index.nix
     ./nix.nix
     ./ripgrep.nix
