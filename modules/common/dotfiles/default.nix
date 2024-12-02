@@ -4,7 +4,10 @@
   };
 
   home-manager.users.${config.user}.home.file = {
-    ".config".source = ./xdg-config;
+    ".config/exercism".source = ./xdg-config/exercism;
+    ".config/wezterm".source = ./xdg-config/wezterm;
+    ".config/nvim".source = ./xdg-config/nvim;
+    ".config/oh-my-posh".source = ./xdg-config/oh-my-posh;
     ".aerospace.toml".source = ./aerospace.toml;
     ".tmux.conf".source = ./tmux.conf;
     ".zshrc".source = ./zshrc;

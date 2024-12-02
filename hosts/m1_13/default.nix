@@ -23,6 +23,7 @@ inputs.nix-darwin.lib.darwinSystem {
     {
       home-manager.users.${globals.user}.imports = [
         inputs.nix-index-database.hmModules.nix-index
+        inputs.catppuccin.homeManagerModules.catppuccin
       ];
     }
     ../../modules/darwin
