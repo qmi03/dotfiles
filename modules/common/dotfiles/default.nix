@@ -1,7 +1,12 @@
 { config, ... }: {
+  programs.zsh = {
+    enable = true;
+  };
+
   home-manager.users.${config.user}.home.file = {
-    ".config".source = ./.config;
-    ".aerospace".source = ./.aerospace.toml;
-    ".tmux.conf".source = ./.tmux.conf;
+    ".config".source = ./xdg-config;
+    ".aerospace.toml".source = ./aerospace.toml;
+    ".tmux.conf".source = ./tmux.conf;
+    ".zshrc".source = ./zshrc;
   };
 }

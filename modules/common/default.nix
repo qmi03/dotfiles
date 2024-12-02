@@ -1,18 +1,11 @@
 { config, lib, ... }: {
   imports = [
-    ./base-packages.nix
-    ./bat.nix
-    ./packages.nix
-    ./bottom.nix
-    ./direnv.nix
     ./fonts.nix
-    ./git.nix
     ./nix-index.nix
     ./nix.nix
-    ./ripgrep.nix
     ./timezone.nix
-    ./shell.nix
     ./dotfiles
+    ./packages
   ];
 
   config.home-manager = {
