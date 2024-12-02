@@ -14,6 +14,7 @@
     fastfetch
     oh-my-posh
     zoxide
+    jq
     ## Programming Languages
     # typst
     typst

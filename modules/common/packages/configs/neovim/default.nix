@@ -10,11 +10,16 @@ let
   };
 in
 {
-  home-manager.users.${config.user}.programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
+  home-manager.users.${config.user} = {
+    home.packages = with pkgs;[
+    swiftlint
+  ];
+    programs.neovim = {
+      enable = true;
+      defaultEditor = true;
+      viAlias = true;
+      vimAlias = true;
+      vimdiffAlias = true;
+    };
   };
 }

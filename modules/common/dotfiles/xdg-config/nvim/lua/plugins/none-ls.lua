@@ -16,6 +16,7 @@ return {
 					null_ls.builtins.formatting.nixpkgs_fmt,
 					null_ls.builtins.formatting.clang_format,
 					null_ls.builtins.formatting.swiftformat,
+					null_ls.builtins.diagnostics.swiftlint,
 				},
 			})
 
