@@ -5,7 +5,6 @@
     ./nix.nix
     ./timezone.nix
     ./xdg.nix
-    ./dotfiles
     ./packages
     ./catppuccin.nix
   ];

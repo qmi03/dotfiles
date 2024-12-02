@@ -18,6 +18,8 @@ eval "$(direnv hook zsh)"
 # Init homebrew
 eval $(/opt/homebrew/bin/brew shellenv)
 
+# Init oh-my-posh
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/tokyonight_storm.qmi.toml)"
 
 # Add zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
