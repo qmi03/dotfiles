@@ -7,6 +7,7 @@
     ./xdg.nix
     ./dotfiles
     ./packages
+    ./catppuccin.nix
   ];
 
   config.home-manager = {

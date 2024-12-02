@@ -36,7 +36,9 @@
   outputs = inputs:
 
     let
-      globals = { user = "qmi"; };
+      globals = {
+        user = "qmi";
+      };
     in
     rec
     {

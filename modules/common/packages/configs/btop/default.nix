@@ -3,7 +3,6 @@
     programs.btop =
       {
         enable = true;
-        catppuccin.enable = true;
         settings = {
           #? Config file for btop v. 1.4.0;
 
