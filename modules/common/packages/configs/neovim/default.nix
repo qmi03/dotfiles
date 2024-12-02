@@ -11,9 +11,14 @@ let
 in
 {
   home-manager.users.${config.user} = {
-    home.packages = with pkgs;[
-    swiftlint
-  ];
+    home = {
+      packages = with pkgs;[
+        swiftlint
+      ];
+      file = {
+        ".config/nvim".source = ./nvim;
+      };
+    };
     programs.neovim = {
       enable = true;
       defaultEditor = true;
