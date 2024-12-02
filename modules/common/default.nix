@@ -12,6 +12,7 @@
   config.home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    backupFileExtension = "backup";
     users.${config.user}.home.stateVersion = "25.05";
   };
 
