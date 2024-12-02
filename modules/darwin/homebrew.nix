@@ -32,7 +32,6 @@
       "qbittorrent"
       "raycast"
       "sioyek"
-      "wezterm@nightly"
     ];
     masApps = {
       # Example

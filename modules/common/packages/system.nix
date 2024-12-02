@@ -11,6 +11,7 @@
       qemu
       tldr
       mkalias
+      wezterm
     ];
 
     variables = {
