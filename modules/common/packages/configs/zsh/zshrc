@@ -97,6 +97,7 @@ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+
 ################################################################################ 
 # ZSH PLUGINS VARIABLES
 # tmux
@@ -121,12 +122,6 @@ export ZSH_TMUX_FIXTERM_WITH_256COLOR=true	# $TERM to use for 256-color terminal
 # Ollama
 export OLLAMA_HOST=localhost:11435
 
-# postgresql homebrew
-# export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
-# export LDFLAGS="-L/opt/homebrew/opt/postgresql@16/lib"
-# export CPPFLAGS="-I/opt/homebrew/opt/postgresql@16/include"
-# export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@16/lib/pkgconfig"
-
 # ANTLR
 export ANTLR_JAR=/usr/local/lib/antlr-4.9.2-complete.jar
 export CLASSPATH=".:/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH"
@@ -136,9 +131,6 @@ export CLASSPATH=".:/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH"
 
 # Haskell
 [ -f "/Users/qmi/.ghcup/env" ] && source "/Users/qmi/.ghcup/env" # ghcup-env
-
-# Julia
-export PATH="/Applications/Julia-1.8.app/Contents/Resources/julia/bin:$PATH"
 
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
