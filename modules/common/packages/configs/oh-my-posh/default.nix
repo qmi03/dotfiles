@@ -1,17 +1,15 @@
-{ config, ... }:
-let
-  userConfig = home-manager.users.${config.user};
-in
+{ config,  ... }:
 {
-  userConfig = {
+  home-manager.users.${config.user} = {
     home = {
       file = {
         ".config/oh-my-posh".source = ./themes;
       };
     };
 
-    programs.zsh.initExtra = ''
-    '';
+    programs.oh-my-posh = {
+      settings = builtins.fromTOML (builtins.unsafeDiscardStringContext (builtins.readFile "./themes/tokyonight_storm.qmi.toml"));
+    };
     ### TODO: Modify the home-manager source code for oh-my-posh to support other file type like toml
     # programs.oh-my-posh = {
     #   enable = true;
