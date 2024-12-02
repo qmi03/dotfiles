@@ -97,7 +97,7 @@ return {
 						hybridMode = false,
 					},
 					typescript = {
-						tsdk = "/Users/phamvoquangminh/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib/",
+						tsdk = "/Users/qmi/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib/",
 					},
 				},
 			})
