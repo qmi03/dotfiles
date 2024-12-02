@@ -4,6 +4,7 @@
     ./nix-index.nix
     ./nix.nix
     ./timezone.nix
+    ./xdg.nix
     ./dotfiles
     ./packages
   ];
