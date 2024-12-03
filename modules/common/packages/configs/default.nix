@@ -5,11 +5,12 @@
     ./zsh
     ./tmux
     ./oh-my-posh
+    ./sioyek
     ./wezterm
-    ./bat.nix
-    ./bottom.nix
-    ./direnv.nix
-    ./git.nix
-    ./ripgrep.nix
+    ./bat
+    ./bottom
+    ./direnv
+    ./git
+    ./ripgrep
   ];
 }

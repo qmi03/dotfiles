@@ -15,6 +15,7 @@
     oh-my-posh
     zoxide
     jq
+    sioyek
     ## Programming Languages
     # typst
     typst

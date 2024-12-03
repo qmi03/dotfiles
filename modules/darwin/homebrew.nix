@@ -31,7 +31,6 @@
       "openkey"
       "qbittorrent"
       "raycast"
-      "sioyek"
     ];
     masApps = {
       # Example
@@ -39,8 +38,11 @@
       "Focus" = 1258530160;
       "Plain Text Editor" = 1572202501;
     };
-    onActivation.cleanup = "zap";
-    onActivation.autoUpdate = true;
-    onActivation.upgrade = true;
+    onActivation = {
+      cleanup = "zap";
+      # autoUpdate = true;
+      # upgrade = true;
+      extraFlags = [ "--verbose" ];
+    };
   };
 }
