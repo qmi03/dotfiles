@@ -21,7 +21,8 @@ in
       # https://search.nixos.org/packages
       (_:_: {
         inherit (stable-darwin)
-          sioyek; # sioyek is currently only in unstable, so we need to use an overlay to get it.
+          # sioyek is currently unstable (2.0.0-unstable-2024-09-29), so we need to use an overlay to get the stable version.
+          sioyek;
       })
     ];
 }
