@@ -1,9 +1,26 @@
 return {
 	{
+		"williamboman/mason.nvim",
+		lazy = false,
+		config = function()
+			require("mason").setup({
+				auto_install = true,
+			})
+		end,
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		lazy = false,
+		config = function()
+			require("mason-lspconfig").setup({
+				auto_install = true,
+			})
+		end,
+	},
+	{
 		"neovim/nvim-lspconfig",
 		lazy = false,
 		config = function()
-			local utils = require("utils")
 			local qmi_lsp_config = require("qmi-lsp-config")
 			local on_attach, capabilities = qmi_lsp_config.on_attach, qmi_lsp_config.capabilities
 			local lspconfig_util = require("lspconfig.util")
