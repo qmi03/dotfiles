@@ -17,6 +17,7 @@ return {
 					null_ls.builtins.formatting.clang_format,
 					null_ls.builtins.formatting.swiftformat,
 					null_ls.builtins.diagnostics.swiftlint,
+					null_ls.builtins.formatting.typstfmt,
 				},
 			})
 

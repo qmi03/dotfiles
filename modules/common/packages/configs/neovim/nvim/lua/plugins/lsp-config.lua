@@ -229,6 +229,12 @@ return {
 				capabilities = capabilities,
 				on_attach = on_attach,
 			})
+
+			lspconfig.tinymist.setup({
+				capabilities = cappabilities,
+				on_attach = on_attach,
+				offset_encoding = "utf-8",
+			})
 		end,
 	},
 	{

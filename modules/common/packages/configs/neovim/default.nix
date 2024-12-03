@@ -14,6 +14,9 @@ in
     home = {
       packages = with pkgs;[
         swiftlint
+
+        typstfmt
+        tinymist
       ];
       file = {
         ".config/nvim".source = ./nvim;
