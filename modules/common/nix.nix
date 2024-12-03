@@ -23,5 +23,5 @@
   services = { } // lib.attrsets.optionalAttrs (builtins.hasAttr "nix-daemon" config.services) {
     nix-daemon.enable = true;
   };
-  import = [ ../../overlays ];
+  imports = [ ../../overlays ];
 }
