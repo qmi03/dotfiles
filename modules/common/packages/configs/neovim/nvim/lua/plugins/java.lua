@@ -94,7 +94,7 @@ return {
 					bundles = {},
 				},
 				capabilities = capabilities,
-        on_attach = on_attach,
+				on_attach = on_attach,
 			}
 			-- This starts a new client & server,
 			-- or attaches to an existing client & server depending on the `root_dir`.

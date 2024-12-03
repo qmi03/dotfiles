@@ -26,7 +26,6 @@
       "iina"
       "keycastr"
       "lulu"
-      "obsidian"
       "onlyoffice"
       "openkey"
       "qbittorrent"

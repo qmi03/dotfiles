@@ -16,6 +16,7 @@
     zoxide
     jq
     sioyek
+    obsidian
     ## Programming Languages
     # typst
     typst
