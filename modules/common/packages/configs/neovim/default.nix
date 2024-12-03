@@ -1,18 +1,5 @@
-{ pkgs, lib, config, ... }:
-let
-  fromGitHub = ref: repo: pkgs.vimUtils.buildVimPluginFrom2Nix {
-    pname = "${lib.strings.sanitizeDerivationName repo}";
-    version = ref;
-    src = builtins.fetchGit {
-      url = "https://github.com/${repo}.git";
-      ref = ref;
-    };
-  };
-in
+{ pkgs, config, ... }:
 {
-  imports = [
-    ./lsp
-  ];
   home-manager.users.${config.user} = {
     home = {
       packages = with pkgs;[
@@ -39,9 +26,6 @@ in
         vue-language-server
         zls
       ];
-      file = {
-        ".config/nvim".source = ./nvim;
-      };
     };
     programs.neovim = {
       enable = true;
@@ -49,6 +33,38 @@ in
       viAlias = true;
       # vimAlias = true;
       vimdiffAlias = true;
+      plugins = with pkgs.vimPlugins;[
+        lazy-nvim
+      ];
+      extraLuaConfig = ''
+                require("vim_opts")
+                vim.g.mapleader = " " -- Need to set leader before lazy for correct keybindings
+                require("lazy").setup({
+        	spec = {
+        	{ import = "plugins" },
+        	},
+                  performance = {
+                    reset_packpath = false,
+                    rtp = {
+                        reset = false,
+                      }
+                    },
+                  dev = {
+                    path = "${pkgs.vimUtils.packDir config.home-manager.users.${config.user}.programs.neovim.finalPackage.passthru.packpathDirs}/pack/myNeovimPackages/start",
+                  },
+                  install = {
+                    -- Safeguard in case we forget to install a plugin with Nix
+                    missing = false,
+                  },
+                })
+      '';
+    };
+    xdg.configFile."nvim/lua" = {
+      recursive = true;
+      source = ./lua;
     };
   };
+  imports = [
+    ./lsp
+  ];
 }
