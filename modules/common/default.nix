@@ -7,6 +7,7 @@
     ./xdg.nix
     ./packages
     ./catppuccin.nix
+    ./locale.nix
   ];
 
   config.home-manager = {

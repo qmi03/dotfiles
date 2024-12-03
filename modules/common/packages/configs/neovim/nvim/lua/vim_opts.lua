@@ -6,6 +6,8 @@ vim.g.background = "light"
 opt.relativenumber = true
 opt.number = true
 
+vim.api.nvim_create_user_command('W', 'write',{ desc = "Fix vim write command to use when accidentally use capital w"})
+
 -- tabs & indentation
 opt.tabstop = 2
 opt.shiftwidth = 2
