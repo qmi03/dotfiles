@@ -20,7 +20,6 @@ return {
 					null_ls.builtins.formatting.typstfmt,
 				},
 			})
-
 			vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 		end,
 	},
