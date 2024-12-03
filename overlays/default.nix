@@ -3,12 +3,12 @@ let
   # You can put the flake inputs in scope by adding them to the list of imports.
   # The names are the same as the attribute names of the inputs in flake.nix.
   inherit (inputs)
-    nixpkgs-stable;
+    nixpkgs-stable-darwin;
   # Nixpkgs unstable is just a flake, and to get the actual nixpkgs package set,
   # you need to import it. In case you are curious how this works, `import nixpkgs-unstable`
   # evaluates https://github.com/NixOS/nixpkgs/blob/master/default.nix,
   # and then we call the result of that import with an attrset that contains the value system.
-  stable = import nixpkgs-stable { inherit (pkgs) system; };
+  stable-darwin = import nixpkgs-stable-darwin { inherit (pkgs) system; };
 in
 {
   # Thise is where we can put our overlays.
@@ -20,7 +20,7 @@ in
       # You can check what packages and version are available in each branch respectively at:
       # https://search.nixos.org/packages
       (_:_: {
-        inherit (stable)
+        inherit (stable-darwin)
           sioyek; # sioyek is currently only in unstable, so we need to use an overlay to get it.
       })
     ];
