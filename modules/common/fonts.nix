@@ -3,12 +3,14 @@
     fonts.fontconfig = {
       enable = true;
       defaultFonts = {
+        serif = [ "STIX Two Text" ];
         monospace = [ "JetBrainsMonoNL Nerd Font Mono" ];
-        emoji = [ "JoyPixels" ];
+        emoji = [ "joypixels" ];
       };
     };
 
     home.packages = with pkgs; [
+      stix-two
       font-awesome
       input-fonts
       joypixels
