@@ -14,6 +14,7 @@
       config = {
         "background_color" = "1.0 1.0 1.0";
         "text_highlight_color" = "1.0 0.0 0.0";
+        "should_launch_new_window" = "1";
       };
     };
   };
