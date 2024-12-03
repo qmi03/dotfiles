@@ -26,7 +26,7 @@ in
       enable = true;
       defaultEditor = true;
       viAlias = true;
-      vimAlias = true;
+      # vimAlias = true;
       vimdiffAlias = true;
     };
   };
