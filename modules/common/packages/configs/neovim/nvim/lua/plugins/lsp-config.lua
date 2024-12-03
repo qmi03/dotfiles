@@ -27,7 +27,7 @@ return {
 			local util = require("lspconfig.util")
 			local mason_registry = require("mason-registry")
 			local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
-				.. "/node_modules/@vue/language-server"
+					.. "/node_modules/@vue/language-server"
 			local on_attach = function(client, bufnr)
 				local function buf_set_keymap(...)
 					vim.api.nvim_buf_set_keymap(bufnr, ...)
@@ -78,7 +78,7 @@ return {
 							library = {
 								vim.env.VIMRUNTIME,
 								-- Depending on the usage, you might want to add additional paths here.
-								-- "${3rd}/luv/library"
+								"${3rd}/luv/library",
 								-- "${3rd}/busted/library",
 							},
 							-- or pull in all of 'runtimepath'. NOTE: this is a lot slower and will cause issues when working on your own configuration (see https://github.com/neovim/nvim-lspconfig/issues/3189)
