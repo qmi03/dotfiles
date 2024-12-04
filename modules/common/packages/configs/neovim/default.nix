@@ -25,6 +25,7 @@
         typescript-language-server
         vue-language-server
         zls
+        checkmake
       ];
     };
     programs.neovim = {

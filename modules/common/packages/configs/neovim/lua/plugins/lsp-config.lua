@@ -133,27 +133,13 @@ return {
 				capabilities = capabilities,
 				on_attach = on_attach,
 			})
-			-- lspconfig.clangd.setup({
-			-- 	capabilities = capabilities,
-			-- 	on_attach = on_attach,
-			-- 	cmd = {
-			-- 		"clangd",
-			-- 		"--header-insertion=never",
-			-- 		"--query-driver=/usr/bin/clang++,/nix/store/3r1g247lp1hk7azfsnp9jyzsj4s4b4y2-mpich-4.2.3/bin/mpicc",
-			-- 	}, -- Adjust driver paths as needed
-			-- 	init_options = {
-			-- 		clangdFileStatus = true,
-			-- 	},
-			-- 	settings = {
-			-- 		clangd = {
-			-- 			arguments = { "-I/nix/store/3r1g247lp1hk7azfsnp9jyzsj4s4b4y2-mpich-4.2.3/include" }, -- Include path for MPICH headers
-			-- 		},
-			-- 	},
-			-- 	formatter = "clang-format",
-			-- })
-			lspconfig.sourcekit.setup({
+			lspconfig.clangd.setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
+				init_options = {
+					clangdFileStatus = true,
+				},
+				formatter = "clang-format",
 			})
 			lspconfig.unison.setup({
 				capabilities = capabilities,
@@ -167,6 +153,11 @@ return {
 				capabilities = capabilities,
 				on_attach = on_attach,
 			})
+			lspconfig.tinymist.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+				offset_encoding = "utf-8",
+			})
 			-- Merge the capabilities
 			capabilities.workspace = capabilities.workspace or {}
 			capabilities.workspace.didChangeWatchedFiles = {
@@ -176,12 +167,7 @@ return {
 			lspconfig.sourcekit.setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
-			})
-
-			lspconfig.tinymist.setup({
-				capabilities = cappabilities,
-				on_attach = on_attach,
-				offset_encoding = "utf-8",
+				filetypes = { "swift", "objc", "objcpp" },
 			})
 		end,
 	},
