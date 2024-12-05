@@ -10,7 +10,6 @@ return {
 				sources = {
 					-- js
 					-- require("none-ls.diagnostics.eslint_d"),
-					null_ls.builtins.formatting.prettier,
 					-- lua
 					null_ls.builtins.formatting.stylua,
 					-- ruby
@@ -25,6 +24,10 @@ return {
 					null_ls.builtins.diagnostics.checkmake,
 					-- typst
 					null_ls.builtins.formatting.typstfmt,
+					-- markdown
+					null_ls.builtins.formatting.markdownlint,
+					-- python
+					null_ls.builtins.formatting.isort,
 				},
 			})
 			vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})

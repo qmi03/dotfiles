@@ -1,6 +1,13 @@
 local utils = require("utils")
 local qmi_lsp_config = require("qmi-lsp-config")
 local capabilities, on_attach = qmi_lsp_config.capabilities, qmi_lsp_config.on_attach
+--local null_ls = require("null-ls")
+-- null_ls.setup({
+-- 	sources = {
+-- 		-- python
+-- 	}
+-- })
+
 local lspconfig = require("lspconfig")
 lspconfig.ruff.setup({
 	capabilities = capabilities,

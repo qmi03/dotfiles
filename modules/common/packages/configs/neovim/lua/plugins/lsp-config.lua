@@ -71,7 +71,16 @@ return {
 			lspconfig.denols.setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
-				root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+				filetypes = {
+					"markdown",
+					"javascript",
+					"javascriptreact",
+					"javascript.jsx",
+					"typescript",
+					"typescriptreact",
+					"typescript.tsx",
+					"json",
+				},
 			})
 
 			local vue_language_server_path = "/etc/profiles/per-user/qmi/bin/vue-language-server"

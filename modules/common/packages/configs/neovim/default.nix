@@ -4,8 +4,6 @@
     home = {
       packages = with pkgs;[
         swiftlint
-        typstfmt
-        tinymist
         vimPlugins.vim-clang-format
         cmake-language-server
         cmake
@@ -14,18 +12,23 @@
         gopls
         jdt-language-server
         lemminx
-        lua-language-server
         nil
         nixpkgs-fmt
         prettierd
         rust-analyzer
-        stylua
         svelte-language-server
         taplo
         typescript-language-server
         vue-language-server
         zls
         checkmake
+        markdownlint-cli
+        # typst
+        typstfmt
+        tinymist
+        # lua
+        lua-language-server
+        stylua
       ];
     };
     programs.neovim = {
