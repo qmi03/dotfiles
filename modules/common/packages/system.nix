@@ -12,6 +12,7 @@
       tldr
       mkalias
       wezterm
+      nerd-fonts.code-new-roman 
     ];
 
     variables = {

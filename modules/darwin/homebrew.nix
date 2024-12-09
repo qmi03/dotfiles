@@ -30,6 +30,7 @@
       "openkey"
       "qbittorrent"
       "raycast"
+      "atomic-wallet"
     ];
     masApps = {
       # Example

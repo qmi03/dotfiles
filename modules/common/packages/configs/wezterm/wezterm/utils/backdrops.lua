@@ -44,9 +44,27 @@ end
 ---   This throws a coroutine error if the function is invoked in outside of `wezterm.lua` in the -
 ---   initial load of the Terminal config.
 function BackDrops:set_files()
-   self.files =
-      wezterm.glob(wezterm.config_dir .. PATH_SEP .. 'backdrops' .. PATH_SEP .. GLOB_PATTERN)
-   wezterm.GLOBAL.background = self.files[1]
+   local locations = {
+      wezterm.config_dir .. PATH_SEP .. 'backdrops' .. PATH_SEP .. GLOB_PATTERN,
+      os.getenv('HOME') .. PATH_SEP .. 'Pictures' .. PATH_SEP .. 'owlhouse' .. GLOB_PATTERN,
+   }
+
+   self.files = {}
+   for _, location in ipairs(locations) do
+      local files = wezterm.glob(location)
+      if files then
+         for _, file in ipairs(files) do
+            table.insert(self.files, file)
+         end
+      end
+   end
+
+   if #self.files > 0 then
+      wezterm.GLOBAL.background = self.files[1]
+   else
+      wezterm.log_error('No backdrops found in the specified locations.')
+   end
+
    return self
 end
 

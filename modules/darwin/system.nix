@@ -43,16 +43,11 @@
         mouse-over-hilite-stack = true;
 
         mineffect = "genie";
-        orientation = "left";
+        orientation = "right";
         show-recents = false;
         tilesize = 44;
 
         persistent-apps = [
-          "${pkgs.firefox-bin}/Applications/Firefox.app"
-          "${pkgs.kitty}/Applications/Kitty.app"
-          "/Applications/Microsoft Teams (work or school).app"
-          "/Applications/Microsoft Outlook.app"
-          "/Applications/Microsoft Remote Desktop.app"
         ];
       };
 
