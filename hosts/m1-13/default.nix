@@ -12,9 +12,6 @@ inputs.nix-darwin.lib.darwinSystem {
 
       # User owning the Homebrew prefix
       user = globals.user;
-
-      # Automatically migrate existing Homebrew installations
-      autoMigrate = true;
     };
   };
   modules = [

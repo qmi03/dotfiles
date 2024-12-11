@@ -15,9 +15,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 export DIRENV_LOG_FORMAT=""
 eval "$(direnv hook zsh)"
 
-# Init homebrew
-eval $(/opt/homebrew/bin/brew shellenv)
-
 # Init oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/tokyonight_storm.qmi.toml)"
 
