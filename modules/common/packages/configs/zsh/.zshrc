@@ -123,8 +123,6 @@ export OLLAMA_HOST=localhost:11435
 export ANTLR_JAR=/usr/local/lib/antlr-4.9.2-complete.jar
 export CLASSPATH=".:/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH"
 
-## openjdk
-# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # Haskell
 [ -f "/Users/qmi/.ghcup/env" ] && source "/Users/qmi/.ghcup/env" # ghcup-env

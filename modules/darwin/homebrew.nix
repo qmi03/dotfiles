@@ -22,14 +22,13 @@
       "betterdisplay"
       "bettertouchtool"
       "docker"
-      "dozer"
+      # "dozer"
       "iina"
       "keycastr"
       "lulu"
-      "onlyoffice"
       "openkey"
-      "qbittorrent"
-      "raycast"
+      # "qbittorrent"
+      # "raycast"
       "atomic-wallet"
     ];
     masApps = {
