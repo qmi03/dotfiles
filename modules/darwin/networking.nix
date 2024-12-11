@@ -1,7 +1,7 @@
 { ... }: {
   networking = {
     computerName = "Qmi's Macbook";
-    # hostName = "Qmi Macbook";
+    hostName = "m1-13";
     # dns = [
     #   "1.1.1.1" # Cloudflare
     #   "1.0.0.1" # Cloudflare

@@ -17,6 +17,8 @@
     jq
     sioyek
     obsidian
+    audacity
+    ffmpeg
     ## Programming Languages
     # typst
     typst

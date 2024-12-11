@@ -227,6 +227,10 @@ run = 'move-node-to-workspace C'
 if.app-id = 'ru.keepcoder.Telegram'
 run = 'move-node-to-workspace C'
 
+[[on-window-detected]]
+if.app-id = 'com.facebook.archon.developerID'
+run = 'move-node-to-workspace C'
+
 # Entertainment
 
 [[on-window-detected]]

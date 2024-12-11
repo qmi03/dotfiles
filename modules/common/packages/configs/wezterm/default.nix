@@ -6,8 +6,5 @@
         ".config/wezterm".source = ./wezterm;
       };
     };
-    programs.wezterm = {
-      enable = true;
-    };
   };
 }

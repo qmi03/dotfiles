@@ -13,6 +13,7 @@
       mkalias
       wezterm
       nerd-fonts.code-new-roman 
+      just
     ];
 
     variables = {

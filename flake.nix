@@ -48,11 +48,11 @@
         home_desktop = import ./hosts/home_desktop { inherit inputs globals; };
       };
       darwinConfigurations = {
-        m1_13 = import ./hosts/m1_13 { inherit inputs globals; };
+        m1-13 = import ./hosts/m1-13 { inherit inputs globals; };
       };
       homeConfigurations = {
         home_desktop = nixosConfigurations.home_desktop.config.home-manager.users.${globals.user}.home;
-        m1_13 = darwinConfigurations.m1_13.config.home-manager.users.${globals.user}.home;
+        m1-13 = darwinConfigurations.m1-13.config.home-manager.users.${globals.user}.home;
       };
     };
 }
