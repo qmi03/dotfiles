@@ -8,6 +8,7 @@
     ./packages
     ./catppuccin.nix
     ./locale.nix
+    ./news.nix
   ];
 
   config.home-manager = {
