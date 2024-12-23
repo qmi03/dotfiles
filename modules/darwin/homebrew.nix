@@ -30,6 +30,8 @@
       # "qbittorrent"
       # "raycast"
       "atomic-wallet"
+      "macfuse"
+      "soulseek"
     ];
     masApps = {
       # Example
