@@ -19,6 +19,9 @@
     obsidian
     audacity
     ffmpeg
+    thc-hydra
+    libusb1
+    spotify
     ## Programming Languages
     # typst
     typst
@@ -37,6 +40,9 @@
     pnpm
     ### zig
     zig
+
+    ### lua
+    lua
     # General
     speedtest-cli
     spicetify-cli

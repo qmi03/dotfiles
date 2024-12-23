@@ -167,6 +167,10 @@ return {
 				on_attach = on_attach,
 				offset_encoding = "utf-8",
 			})
+			lspconfig.texlab.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
 			-- Merge the capabilities
 			capabilities.workspace = capabilities.workspace or {}
 			capabilities.workspace.didChangeWatchedFiles = {

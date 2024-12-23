@@ -23,6 +23,7 @@
         zls
         checkmake
         markdownlint-cli
+        texlab
         # typst
         typstfmt
         tinymist
