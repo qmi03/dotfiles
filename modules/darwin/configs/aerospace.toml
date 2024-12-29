@@ -234,6 +234,10 @@ run = 'move-node-to-workspace C'
 # Entertainment
 
 [[on-window-detected]]
+if.app-id = 'com.github.th-ch.youtube-music'
+run = 'move-node-to-workspace E'
+
+[[on-window-detected]]
 if.app-id = 'com.apple.Music'
 run = 'move-node-to-workspace E'
 

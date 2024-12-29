@@ -33,6 +33,7 @@
       "macfuse"
       "soulseek"
       "ghostty"
+      "th-ch/youtube-music/youtube-music"
     ];
     masApps = {
       # Example
