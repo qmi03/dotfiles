@@ -32,6 +32,7 @@
       "atomic-wallet"
       "macfuse"
       "soulseek"
+      "ghostty"
     ];
     masApps = {
       # Example

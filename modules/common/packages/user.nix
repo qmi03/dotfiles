@@ -21,7 +21,7 @@
     ffmpeg
     thc-hydra
     libusb1
-    spotify
+    # spotify
     ## Programming Languages
     # typst
     typst
