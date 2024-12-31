@@ -5,6 +5,7 @@
       "FelixKratz/formulae"
       "nikitabobko/tap"
       "nextfire/tap"
+      "th-ch/youtube-music"
     ];
     brews = [
       "mas"
@@ -33,7 +34,7 @@
       "macfuse"
       "soulseek"
       "ghostty"
-      "th-ch/youtube-music/youtube-music"
+      "youtube-music"
     ];
     masApps = {
       # Example
