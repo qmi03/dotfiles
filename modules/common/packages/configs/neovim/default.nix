@@ -28,8 +28,8 @@
         markdownlint-cli
         texlab
         # typst
-        typstfmt
         tinymist
+        typstyle
         # lua
         lua-language-server
         stylua
