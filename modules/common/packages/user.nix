@@ -2,6 +2,7 @@
   home-manager.users.${config.user}.home.packages = with pkgs; [
     # Dev
     ## Tools
+    nushell
     direnv
     lazygit
     bat
@@ -45,7 +46,7 @@
     lua
     # General
     speedtest-cli
-    spicetify-cli
+    # spicetify-cli
     w3m
   ];
 }
