@@ -6,6 +6,7 @@
       "nikitabobko/tap"
       "nextfire/tap"
       "th-ch/youtube-music"
+      "koekeishiya/formulae"
     ];
     brews = [
       "mas"
@@ -16,13 +17,14 @@
       "exercism"
       "unisonlang"
       "postgresql@17"
+      "yabai"
     ];
     casks = [
       "aerospace"
       "arc"
+      "zen-browser@twilight"
       "betterdisplay"
       "bettertouchtool"
-      "docker"
       # "dozer"
       "iina"
       "keycastr"
@@ -35,6 +37,8 @@
       "soulseek"
       "ghostty"
       "youtube-music"
+      "vscodium"
+      "omnidisksweeper"
     ];
     masApps = {
       # Example
