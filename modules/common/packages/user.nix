@@ -22,12 +22,19 @@
     ffmpeg
     thc-hydra
     libusb1
+    zathura
+    lazydocker
+    i3
+    kitty
+    stow
+
+
+    speedtest-cli
+    # spicetify-cli
+    w3m
     # spotify
     ## Programming Languages
-    # typst
     typst
-    ### Java
-    gradle_7
     ### Haskell
     ghc
     ### Julia
@@ -44,9 +51,5 @@
 
     ### lua
     lua
-    # General
-    speedtest-cli
-    # spicetify-cli
-    w3m
   ];
 }
