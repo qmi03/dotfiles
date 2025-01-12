@@ -33,6 +33,8 @@
         # lua
         lua-language-server
         stylua
+        # yaml
+        yamlfmt
       ];
     };
     # programs.neovim = {
