@@ -43,7 +43,7 @@
         mouse-over-hilite-stack = true;
 
         mineffect = "genie";
-        orientation = "right";
+        orientation = "bottom";
         show-recents = false;
         tilesize = 44;
 

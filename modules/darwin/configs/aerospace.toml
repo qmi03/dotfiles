@@ -214,6 +214,14 @@ alt-shift-l = ['join-with right', 'mode main']
 if.app-id = 'company.thebrowser.Browser'
 run = 'move-node-to-workspace B'
 
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.thunderbird'
+run = 'move-node-to-workspace B'
+
 # Chat Apps
 [[on-window-detected]]
 if.app-id = 'com.vng.zalo'
@@ -256,6 +264,10 @@ run = 'move-node-to-workspace T'
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace T'
+
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal.kitty'
 run = 'move-node-to-workspace T'
 
 [[on-window-detected]]

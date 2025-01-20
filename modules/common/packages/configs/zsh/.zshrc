@@ -79,6 +79,7 @@ alias installdir='dirname "$(pwd)"'
 alias pygrun='python3 "$(installdir)"/bin/pygrun'
 alias antlr4='java -jar /usr/local/lib/antlr-4.9.2-complete.jar -o target'
 alias grun='java org.antlr.v4.runtime.misc.TestRig'
+alias dev='nix develop -c $SHELL'
 
 # Shell integrations
 eval "$(fzf --zsh)"
