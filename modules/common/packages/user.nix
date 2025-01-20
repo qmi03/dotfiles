@@ -46,6 +46,7 @@
     ### Javascript
     nodejs
     pnpm
+    deno
     ### zig
     zig
 

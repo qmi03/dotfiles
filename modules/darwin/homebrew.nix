@@ -2,37 +2,37 @@
   homebrew = {
     enable = true;
     taps = [
-      "FelixKratz/formulae"
-      "nikitabobko/tap"
-      "nextfire/tap"
+      "nikitabobko/tap" # Aerospace
     ];
     brews = [
       "mas"
       "swiftformat"
-      "deno"
-      "sqlite"
-      "apple-music-discord-rpc"
       "exercism"
       "unisonlang"
       "postgresql@17"
     ];
     casks = [
+      # utility
       "aerospace"
-      "arc"
-      "zen-browser@twilight"
-      "iina"
+      # "raycast"
       "keycastr"
       "lulu"
       "openkey"
-      # "qbittorrent"
-      # "raycast"
-      "macfuse"
-      "soulseek"
-      "ghostty"
-      "vscodium"
       "omnidisksweeper"
       # "betterdisplay"
       # "dozer"
+
+      # essentials
+      "arc"
+      "zen-browser@twilight"
+      "iina"
+      # "qbittorrent"
+      "macfuse"
+      "soulseek"
+
+      # dev
+      "ghostty"
+      "vscodium"
     ];
     masApps = {
       # Example
