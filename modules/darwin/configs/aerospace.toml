@@ -240,7 +240,6 @@ if.app-id = 'com.facebook.archon.developerID'
 run = 'move-node-to-workspace C'
 
 # Entertainment
-
 [[on-window-detected]]
 if.app-id = 'com.github.th-ch.youtube-music'
 run = 'move-node-to-workspace E'
@@ -256,6 +255,11 @@ run = 'move-node-to-workspace E'
 [[on-window-detected]]
 if.app-id = 'com.colliderli.iina'
 run = 'move-node-to-workspace E'
+
+# Game
+[[on-window-detected]]
+if.app-id = 'com.valvesoftware.steam'
+run = 'move-node-to-workspace G'
 
 # Terminal and Dev stuffs
 [[on-window-detected]]

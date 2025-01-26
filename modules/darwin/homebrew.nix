@@ -21,6 +21,7 @@
       "omnidisksweeper"
       # "betterdisplay"
       # "dozer"
+      "lmms"
 
       # essentials
       "arc"

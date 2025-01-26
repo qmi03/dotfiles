@@ -39,6 +39,8 @@
     ghc
     ### Julia
     julia_19-bin
+    # Go
+    go
     ### C/C++/Python
     mpich
     pixi
