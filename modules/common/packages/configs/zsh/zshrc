@@ -18,6 +18,13 @@ eval "$(direnv hook zsh)"
 # Init oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/tokyonight_storm.qmi.toml)"
 
+# Check if 'thefuck' is installed
+if command -v thefuck &> /dev/null; then
+    eval $(thefuck --alias)
+else
+    :  # Do nothing if 'thefuck' is not installed
+fi
+
 # Add zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -124,6 +131,9 @@ export OLLAMA_HOST=localhost:11435
 export ANTLR_JAR=/usr/local/lib/antlr-4.9.2-complete.jar
 export CLASSPATH=".:/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH"
 
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm/bin"
+export PATH="$PNPM_HOME:$PATH"
 
 # Haskell
 [ -f "/Users/qmi/.ghcup/env" ] && source "/Users/qmi/.ghcup/env" # ghcup-env
