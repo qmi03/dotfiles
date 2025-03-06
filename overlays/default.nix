@@ -24,5 +24,12 @@ in
           # sioyek is currently unstable (2.0.0-unstable-2024-09-29), so we need to use an overlay to get the stable version.
           sioyek;
       })
+      (final: prev: {
+      llvm = prev.llvm.overrideAttrs (old: {
+        patches = (old.patches or []) ++ [
+          ./fix-arm64-test.patch
+        ];
+      });
+    })
     ];
 }

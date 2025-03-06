@@ -1,0 +1,10 @@
+--- a/llvm/test/lit.cfg.py
++++ b/llvm/test/lit.cfg.py
+@@ -607,7 +607,7 @@ def host_unwind_supports_jit():
+     if platform.system() == "Darwin":
+ 
+         assert (
+-            "arm64" in config.host_triple
++            ("arm64" in config.host_triple or "aarch64" in config.host_triple)
+             or "x86_64" in config.host_triple
+         )
