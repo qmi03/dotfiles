@@ -26,6 +26,7 @@
     lazydocker
     i3
     kitty
+    wezterm
     stow
     melonDS
     socat
