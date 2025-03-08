@@ -14,22 +14,12 @@ in
   # Thise is where we can put our overlays.
   # They are a way to modify the packages availabe to you inside the `pkgs` argument of modules.
   # Referrence on them can be foung here: https://nixos.wiki/wiki/Overlays
-  nixpkgs.overlays =
-    [
-      # Simple overlay that doesn't use any arguments, and just exposes the packages from unstable.
-      # You can check what packages and version are available in each branch respectively at:
-      # https://search.nixos.org/packages
-      (_:_: {
-        inherit (stable-darwin)
-          # sioyek is currently unstable (2.0.0-unstable-2024-09-29), so we need to use an overlay to get the stable version.
-          sioyek;
-      })
-      (final: prev: {
-      llvm = prev.llvm.overrideAttrs (old: {
-        patches = (old.patches or []) ++ [
-          ./fix-arm64-test.patch
-        ];
-      });
+  nixpkgs.overlays = [
+    (_:_: {
+      inherit (stable-darwin)
+        # Get specific packages from stable-darwin
+        sioyek
+        obsidian;
     })
-    ];
+  ];
 }

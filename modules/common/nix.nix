@@ -1,4 +1,4 @@
-{ config, lib, ... }: {
+{ ... }: {
   nix = {
     optimise.automatic = true;
     gc = {
@@ -20,8 +20,5 @@
     };
   };
 
-  services = { } // lib.attrsets.optionalAttrs (builtins.hasAttr "nix-daemon" config.services) {
-    nix-daemon.enable = true;
-  };
   imports = [ ../../overlays ];
 }
