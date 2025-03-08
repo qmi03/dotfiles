@@ -256,6 +256,14 @@ run = 'move-node-to-workspace E'
 if.app-id = 'com.colliderli.iina'
 run = 'move-node-to-workspace E'
 
+[[on-window-detected]]
+if.app-id = 'com.yourcompany.SoulseekQt'
+run = 'move-node-to-workspace E'
+
+[[on-window-detected]]
+if.app-id = 'org.qbittorrent.qBittorrent'
+run = 'move-node-to-workspace E'
+
 # Game
 [[on-window-detected]]
 if.app-id = 'com.valvesoftware.steam'
