@@ -27,9 +27,12 @@
     i3
     kitty
     stow
+    melonDS
+    socat
+    localsend
+    # llvmPackages_19.clang-tools
 
 
-    speedtest-cli
     # spicetify-cli
     w3m
     # spotify
@@ -38,7 +41,7 @@
     ### Haskell
     ghc
     ### Julia
-    julia_19-bin
+    julia-bin
     # Go
     go
     ### C/C++/Python
@@ -49,10 +52,13 @@
     nodejs
     pnpm
     deno
+    bun
     ### zig
     zig
 
     ### lua
     lua
+
+    ##jekyll
   ];
 }

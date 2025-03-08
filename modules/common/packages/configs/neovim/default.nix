@@ -7,7 +7,6 @@
     home = {
       packages = with pkgs;[
         swiftlint
-        vimPlugins.vim-clang-format
         cmake-language-server
         cmake
         emmet-language-server
@@ -27,6 +26,7 @@
         checkmake
         markdownlint-cli
         texlab
+        bash-language-server
         # typst
         tinymist
         typstyle
@@ -35,6 +35,12 @@
         stylua
         # yaml
         yamlfmt
+
+        # php
+        phpactor
+
+        # emmet
+        emmet-language-server
       ];
     };
     # programs.neovim = {

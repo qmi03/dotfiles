@@ -10,6 +10,7 @@
       "exercism"
       "unisonlang"
       "postgresql@17"
+      "llvm"
     ];
     casks = [
       # utility
