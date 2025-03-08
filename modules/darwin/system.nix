@@ -1,5 +1,26 @@
 { config, pkgs, ... }: {
-  nixpkgs.hostPlatform = "aarch64-darwin";
+  nix = {
+    optimise.automatic = true;
+    gc = {
+      automatic = true;
+      interval = { Weekday = 0; Hour = 0; Minute = 0; };
+      options = "--delete-older-than 7d";
+    };
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+      warn-dirty = false;
+    };
+  };
+
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      input-fonts.acceptLicense = true;
+      joypixels.acceptLicense = true;
+    };
+    hostPlatform = "aarch64-darwin";
+  };
+
   system = {
     stateVersion = 5;
     keyboard = {
@@ -52,10 +73,23 @@
       };
 
       finder = {
-        FXPreferredViewStyle = "clmv";
+        AppleShowAllFiles = true;
+        ShowStatusBar = true;
+        ShowPathbar = true;
+
         FXDefaultSearchScope = "SCcf";
+        FXRemoveOldTrashItems = true;
+        FXPreferredViewStyle = "Nlsv";
+        AppleShowAllExtensions = true;
         FXEnableExtensionChangeWarning = false;
-        QuitMenuItem = true;
+
+        CreateDesktop = true;
+        QuitMenuItem = false;
+        ShowExternalHardDrivesOnDesktop = true;
+        ShowMountedServersOnDesktop = true;
+        ShowRemovableMediaOnDesktop = true;
+
+        _FXShowPosixPathInTitle = true;
       };
 
       LaunchServices.LSQuarantine = false;

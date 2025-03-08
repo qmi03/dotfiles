@@ -3,6 +3,7 @@
     enable = true;
     taps = [
       "nikitabobko/tap" # Aerospace
+      "smudge/smudge" # nightlight
     ];
     brews = [
       "mas"
@@ -10,12 +11,18 @@
       "exercism"
       "unisonlang"
       "postgresql@17"
+      "thefuck"
+      "kew"
+      "nightlight"
+      "mpv"
+      "imagemagick"
       "llvm"
     ];
     casks = [
       # utility
       "aerospace"
       # "raycast"
+      "chromium"
       "keycastr"
       "lulu"
       "openkey"
@@ -23,24 +30,31 @@
       # "betterdisplay"
       # "dozer"
       "lmms"
+      "mos"
+      "wireshark"
+      "android-studio"
+      "openmtp"
+      "inkscape"
+      "ollama"
 
       # essentials
-      "arc"
       "zen-browser@twilight"
       "iina"
-      # "qbittorrent"
+      "qbittorrent"
       "macfuse"
       "soulseek"
 
       # dev
       "ghostty"
       "vscodium"
+      "emacs"
     ];
     masApps = {
       # Example
       # "Yoink": id
       "Focus" = 1258530160; # Focus to Do
       "Plain Text Editor" = 1572202501;
+      "Goodnotes 6" = 1444383602;
     };
     onActivation = {
       cleanup = "zap";
