@@ -156,4 +156,5 @@ eval "$(pixi completion --shell zsh)"
 
 # llvm
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export NIXPKGS_ALLOW_UNFREE=1
 

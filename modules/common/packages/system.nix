@@ -11,7 +11,7 @@
       qemu
       tldr
       mkalias
-      nerd-fonts.code-new-roman 
+      nerd-fonts.code-new-roman
       just
     ];
 
