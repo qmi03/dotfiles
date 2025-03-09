@@ -11,6 +11,7 @@
     ./direnv
     ./git
     ./ripgrep
+    ./zathura
   ];
 
 }
