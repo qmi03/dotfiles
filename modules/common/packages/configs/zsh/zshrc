@@ -1,6 +1,8 @@
 # export XDG_CONFIG_HOME="$HOME/.config"
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+declare -A ZINIT
+ZINIT[NO_ALIASES]=1
 
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -90,7 +92,22 @@ alias dev='nix develop -c $SHELL'
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
+function cd() {
+  if [ "$#" -eq 0 ]; then
+    if [ -n "$TMUX" ]; then
+      local session_path=$(tmux display-message -p "#{session_path}")
+      if [ -n "$session_path" ] && [ -d "$session_path" ]; then
+        __zoxide_z "$session_path"
+        return
+      fi
+    fi
+    # Fall back to home directory if not in tmux or session path is invalid
+    __zoxide_z ~
+  else
+    __zoxide_z "$@"
+  fi
+}
 
 
 # Preferred editor for local and remote sessions
