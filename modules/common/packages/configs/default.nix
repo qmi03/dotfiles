@@ -3,7 +3,7 @@
     ./neovim
     ./btop
     ./zsh
-    ./tmux
+    # ./tmux
     ./oh-my-posh
     ./sioyek
     ./bat

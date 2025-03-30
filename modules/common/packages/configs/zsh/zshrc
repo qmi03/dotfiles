@@ -13,6 +13,15 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+# Download tpm (tmux plugin manager), if it's not there yet
+TPM_HOME="${HOME}/.tmux/plugins/tpm"
+if [ ! -d "$TPM_HOME" ]; then
+  mkdir -p "$(dirname $TPM_HOME)"
+  git clone https://github.com/tmux-plugins/tpm "$TPM_HOME"
+  echo "Installed tpm (tmux plugin manager) to $TPM_HOME"
+  echo "Don't forget to add the tpm configuration to your ~/.tmux.conf file!"
+fi
+
 
 # Init oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/tokyonight_storm.qmi.toml)"
