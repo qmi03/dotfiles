@@ -32,7 +32,10 @@
     socat
     localsend
     # llvmPackages_19.clang-tools
-
+    raylib
+    php
+    php83Packages.composer
+    intelephense
 
     # spicetify-cli
     w3m

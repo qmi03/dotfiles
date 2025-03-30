@@ -11,35 +11,42 @@
       "exercism"
       "unisonlang"
       "postgresql@17"
-      "thefuck"
       "kew"
       "nightlight"
       "mpv"
       "imagemagick"
       "llvm"
+      "lf"
       "coursier"
+      "gh"
+      "fileicon"
     ];
     casks = [
       # utility
       "aerospace"
-      # "raycast"
-      "chromium"
       "keycastr"
       "lulu"
       "openkey"
       "omnidisksweeper"
-      # "betterdisplay"
-      # "dozer"
-      "lmms"
-      "mos"
       "wireshark"
       "android-studio"
-      "openmtp"
       "inkscape"
       "ollama"
+      "gimp"
+      "marta"
+      "karabiner-elements"
+      "alt-tab"
+      # "raycast"
+      # "betterdisplay"
+      # "dozer"
+
+      # music
+      "lmms"
+      "mos"
 
       # essentials
       "zen-browser@twilight"
+      "google-chrome"
       "iina"
       "qbittorrent"
       "macfuse"
@@ -47,8 +54,7 @@
 
       # dev
       "ghostty"
-      "vscodium"
-      "emacs"
+      "docker"
     ];
     masApps = {
       # Example

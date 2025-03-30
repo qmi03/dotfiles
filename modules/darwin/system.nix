@@ -84,7 +84,7 @@
         FXEnableExtensionChangeWarning = false;
 
         CreateDesktop = true;
-        QuitMenuItem = false;
+        QuitMenuItem = true;
         ShowExternalHardDrivesOnDesktop = true;
         ShowMountedServersOnDesktop = true;
         ShowRemovableMediaOnDesktop = true;
