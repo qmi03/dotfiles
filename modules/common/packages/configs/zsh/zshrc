@@ -123,6 +123,20 @@ function cd() {
   fi
 }
 
+# Add this to ~/.zshrc
+watch_xampp_logs() {
+  local log_dir="/Applications/XAMPP/xamppfiles/logs"
+  local logs=("access_log" "error_log" "php_error_log" "ssl_request_log")
+  if [ -n "$TMUX" ]; then
+    tmux new-window -n xampp_logs \; send-keys "tail -f $log_dir/${logs[1]}" C-m \; split-window -v \; send-keys "tail -f $log_dir/${logs[2]}" C-m \; select-pane -t 0 \; split-window -h \; send-keys "tail -f $log_dir/${logs[4]}" C-m \; select-pane -t 2 \; split-window -h \; send-keys "tail -f $log_dir/${logs[3]}" C-m
+  else
+    tmux new-session -s xampp_monitor -n xampp_logs -c "$(pwd)" \; send-keys "tail -f $log_dir/${logs[1]}" C-m \; split-window -v \; send-keys "tail -f $log_dir/${logs[2]}" C-m \; select-pane -t 0 \; split-window -h \; send-keys "tail -f $log_dir/${logs[4]}" C-m \; select-pane -t 2 \; split-window -h \; send-keys "tail -f $log_dir/${logs[3]}" C-m
+  fi
+}
+
+cheatsh() {
+    curl cheat.sh/"$1"
+}
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
