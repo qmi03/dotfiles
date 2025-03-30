@@ -27,6 +27,7 @@
         markdownlint-cli
         texlab
         bash-language-server
+        tailwindcss-language-server
         # typst
         tinymist
         typstyle
@@ -38,6 +39,7 @@
 
         # php
         phpactor
+        php83Packages.php-cs-fixer
 
         # emmet
         emmet-language-server
