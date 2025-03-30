@@ -158,14 +158,6 @@ export PATH="$PNPM_HOME:$PATH"
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# <<< JVM installed by coursier <<<
-export JAVA_HOME="/Users/qmi/Library/Caches/Coursier/arc/https/github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11%252B28/OpenJDK11-jdk_x64_mac_hotspot_11_28.tar.gz/jdk-11+28/Contents/Home"
-# <<< JVM installed by coursier <<<
-
 # Zig
 export PATH="$HOME/zig-bootstrap-0.14.0-dev.2064+b5cafe223/out/zig-aarch64-macos-none-baseline:$PATH"
 
@@ -174,4 +166,3 @@ eval "$(pixi completion --shell zsh)"
 # llvm
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export NIXPKGS_ALLOW_UNFREE=1
-

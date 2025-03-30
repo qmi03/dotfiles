@@ -17,6 +17,7 @@
       "mpv"
       "imagemagick"
       "llvm"
+      "coursier"
     ];
     casks = [
       # utility
