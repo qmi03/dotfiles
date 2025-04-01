@@ -37,9 +37,9 @@
     php83Packages.composer
     intelephense
 
-    # spicetify-cli
+    spicetify-cli
     w3m
-    # spotify
+    spotify
     ## Programming Languages
     typst
     ### Haskell
