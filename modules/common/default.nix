@@ -1,4 +1,4 @@
-{ config, lib, ... }: {
+{ config, lib, inputs, ... }: {
   imports = [
     ./fonts.nix
     ./nix-index.nix
@@ -15,6 +15,7 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "backup";
+    extraSpecialArgs = { inherit inputs; };
     users.${config.user}.home.stateVersion = "25.05";
   };
 

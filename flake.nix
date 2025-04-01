@@ -32,13 +32,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     catppuccin.url = "github:catppuccin/nix";
-    ghostty.url = "github:ghostty-org/ghostty";
   };
 
   outputs = inputs:
-
     let
       globals = {
         user = "qmi";
