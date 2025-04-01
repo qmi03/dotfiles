@@ -1,0 +1,3 @@
+config-file = ?./other.ini
+config-file = ./appearance.ini
+config-file = ./keybinding.ini

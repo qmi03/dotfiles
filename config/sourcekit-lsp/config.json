@@ -1,0 +1,40 @@
+{
+  // Enable background indexing for better performance
+  "backgroundIndexing": true,
+  
+  // Set background preparation mode to "enabled" for faster indexing without full builds
+  "backgroundPreparationMode": "enabled",
+  
+  // Limit CPU usage for background indexing (70% of cores)
+  "index": {
+    "maxCoresPercentageToUseForBackgroundIndexing": 0.7,
+    "updateIndexStoreTimeout": 120
+  },
+  
+  // Set shorter timeout for build settings to fall back faster
+  "buildSettingsTimeout": 1000,
+  
+  // Debounce diagnostics updates to reduce CPU usage
+  "swiftPublishDiagnosticsDebounceDuration": 500,
+  
+  // Prevent long-running requests from blocking the server
+  "sourcekitdRequestTimeout": 10000,
+  
+  // Debounce progress notifications to reduce UI updates
+  "workDoneProgressDebounceDuration": 250,
+  
+  // Cancel pending requests on file changes to prevent queuing
+  "cancelTextDocumentRequestsOnEditAndClose": true,
+  
+  // SwiftPM configuration for optimized builds
+  "swiftPM": {
+    "configuration": "debug",
+    "disableSandbox": true
+  },
+  
+  // Logging configuration for troubleshooting
+  "logging": {
+    "level": "error",
+    "privacyLevel": "public"
+  }
+}

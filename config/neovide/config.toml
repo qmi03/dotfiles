@@ -1,0 +1,28 @@
+backtraces_path = "~/.local/share/neovide" # see below for the default platform specific location
+fork = true
+frame = "none"
+idle = true
+# maximized = true
+mouse-cursor-icon = "i-beam"
+# neovim-bin = "/usr/bin/nvim" # in reality found dynamically on $PATH if unset
+no-multigrid = false
+srgb = true
+tabs = true
+theme = "auto"
+title-hidden = true
+vsync = true
+wsl = false
+
+[font]
+size = 19
+hinting = "full"
+edging = "antialias"
+
+[[font.normal]]
+family = "JetBrainsMono Nerd Font Mono"
+style = "W400"
+
+
+[[font.bold]]
+family = "JetBrainsMono Nerd Font Propo"
+style = "W600"
