@@ -14,5 +14,4 @@
     ./zathura
     ./spicetify
   ];
-
 }
