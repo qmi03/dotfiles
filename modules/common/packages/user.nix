@@ -36,6 +36,7 @@
     php
     php83Packages.composer
     intelephense
+    gitingest
 
     spicetify-cli
     w3m
