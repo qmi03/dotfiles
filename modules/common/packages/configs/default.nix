@@ -12,6 +12,7 @@
     ./git
     ./ripgrep
     ./zathura
+    ./spicetify
   ];
 
 }
