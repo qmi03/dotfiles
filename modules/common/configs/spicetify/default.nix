@@ -13,9 +13,21 @@ in
         adblockify
         hidePodcasts
         shuffle
-        fullAppDisplay
         skipStats
+        keyboardShortcut
+        trashbin
+        popupLyrics
+        fullAppDisplay
       ];
+      # enabledCustomApps = with spicePkgs.apps; [
+      #   ncsVisualizer
+      #   localFiles
+      #   marketplace
+      #   reddit
+      #   lyricsPlus
+      #   historyInSidebar
+      #   betterLibrary
+      # ];
       theme = spicePkgs.themes.comfy;
     };
   };

@@ -2,9 +2,9 @@
   imports = [
     ../common
     ./configs
-    ./homebrew.nix
+    ./homebrew
     ./environment.nix
-    ./packages.nix
+    ./packages
     ./system.nix
     ./touch-id.nix
     ./users.nix

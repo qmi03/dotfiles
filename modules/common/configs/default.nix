@@ -3,6 +3,7 @@
     ./neovim
     ./btop
     ./zsh
+    ./catppuccin
     # ./tmux
     ./oh-my-posh
     ./sioyek

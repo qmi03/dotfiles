@@ -5,10 +5,10 @@
     ./nix.nix
     ./timezone.nix
     ./xdg.nix
-    ./packages
-    ./catppuccin.nix
     ./locale.nix
     ./news.nix
+    ./configs
+    ./packages
   ];
 
   config.home-manager = {

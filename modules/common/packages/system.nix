@@ -1,17 +1,30 @@
 { lib, pkgs, ... }: {
   environment = {
     systemPackages = with pkgs; [
+      # Core utilities
       curl
-      git
+      wget
       vim
       neovim
-      wget
+      git
+
+      # Build tools
       cmake
       pkg-config
+
+      # System tools
       qemu
+
+      # Documentation
       tldr
+
+      # Mac-specific
       mkalias
+
+      # Fonts
       nerd-fonts.code-new-roman
+
+      # Task runners
       just
     ];
 
