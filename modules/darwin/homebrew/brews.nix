@@ -22,6 +22,7 @@
 
     # System utilities
     "nightlight"
+    "borders"
 
     # Multimedia
     # "kew" # tui music

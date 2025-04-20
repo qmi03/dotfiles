@@ -7,7 +7,7 @@
     "openkey"
     "omnidisksweeper"
     "karabiner-elements"
-    "alt-tab"
+    # "alt-tab"
     "blackhole-2ch"
     "background-music"
     "mos"
@@ -29,7 +29,7 @@
     "lmms"
 
     # AI/ML
-    "ollama"
+    # "ollama"
 
     # File management
     "marta"

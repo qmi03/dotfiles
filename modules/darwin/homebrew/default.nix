@@ -4,6 +4,7 @@
     taps = [
       "nikitabobko/tap" # Aerospace
       "smudge/smudge" # nightlight
+      "FelixKratz/formulae" # borders
     ];
 
     # Configuration for all homebrew
