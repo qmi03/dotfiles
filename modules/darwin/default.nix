@@ -1,7 +1,6 @@
 { ... }: {
   imports = [
     ../common
-    ./configs
     ./homebrew
     ./environment.nix
     ./packages
