@@ -21,9 +21,6 @@
       # Mac-specific
       mkalias
 
-      # Fonts
-      nerd-fonts.code-new-roman
-
       # Task runners
       just
     ];

@@ -14,12 +14,12 @@ in
   # Thise is where we can put our overlays.
   # They are a way to modify the packages availabe to you inside the `pkgs` argument of modules.
   # Referrence on them can be foung here: https://nixos.wiki/wiki/Overlays
-  nixpkgs.overlays = [
-    (_:_: {
-      inherit (stable-darwin)
-        # Get specific packages from stable-darwin
-        sioyek
-        obsidian;
-    })
-  ];
+  # nixpkgs.overlays = [
+  #   (_:_: {
+  #     inherit (stable-darwin)
+  #       # Get specific packages from stable-darwin
+  #       sioyek
+  #       obsidian;
+  #   })
+  # ];
 }
