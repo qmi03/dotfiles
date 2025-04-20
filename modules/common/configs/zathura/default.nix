@@ -22,8 +22,6 @@
       "d" = "toggle_page_mode";
       # Toggle recolor mode (for dark/light switch)
       "i" = "recolor";
-
-      "selection-clipboard" = "clipboard";
     };
     extraConfig = ''
       # Enable copy to clipboard with mouse selection
@@ -33,8 +31,9 @@
       set window-title-basename true
       set adjust-open "best-fit"
       set page-padding 1
-      set scroll-step 40
-      set scroll-page-aware true
+      set scroll-step 100
+      set scroll-hstep 100
+      set zoom-step 5
       set show-hidden true
       set font "monospace normal 18"
       set render-loading true

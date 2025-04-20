@@ -1,7 +1,6 @@
 { config, pkgs, ... }: {
   home-manager.users.${config.user}.home.packages = with pkgs; [
     # Document Viewers
-    sioyek
     zathura
 
     # Note-taking & Productivity
