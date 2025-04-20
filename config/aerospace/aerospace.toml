@@ -10,7 +10,7 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget borders active_color=0xff1fde22 inactive_color=0xff494d64 width=5.0'
+  'exec-and-forget borders active_color=0xff1fde22 inactive_color=0xff494d64 width=5.0',
 ]
 
 # Start AeroSpace at login
@@ -290,3 +290,14 @@ run = 'move-node-to-workspace F'
 [[on-window-detected]]
 if.app-id = 'org.yandex.marta'
 run = 'move-node-to-workspace F'
+
+[workspace-to-monitor-force-assignment]
+1 = ['secondary', 'main']
+2 = ['secondary', 'main']
+3 = ['secondary', 'main']
+4 = ['secondary', 'main']
+5 = ['secondary', 'main']
+6 = ['secondary', 'main']
+7 = ['secondary', 'main']
+8 = ['secondary', 'main']
+9 = ['secondary', 'main']
