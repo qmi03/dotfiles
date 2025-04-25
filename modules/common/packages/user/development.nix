@@ -24,6 +24,7 @@
 
     # Text Editors/IDEs
     neovim
+    neovim-remote
 
     # Programming Languages & Tools
     ## Typesetting

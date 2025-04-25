@@ -11,6 +11,7 @@
       core = {
         autocrlf = "input";
         untrackedCache = true;
+        editor = "nvim";
       };
 
       init.defaultBranch = "master";
