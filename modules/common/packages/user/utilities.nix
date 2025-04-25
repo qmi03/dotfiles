@@ -3,11 +3,11 @@
     # CLI Utilities
     curl
     wget
-    tldr
     fastfetch
-    stow
     gitingest
-    w3m
+    lolcat
+    cmatrix
+    nyancat
 
     # System Utilities
     qemu
