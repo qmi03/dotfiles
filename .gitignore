@@ -1,2 +1,4 @@
 .DS_Store
 zen-browser-profiles
+config/lazygit/state.yml
+config/lazygit/config.yml
