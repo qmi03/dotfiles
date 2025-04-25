@@ -1,6 +1,13 @@
 { pkgs, config, ... }:
 {
   home-manager.users.${config.user} = {
+    programs.neovim = {
+      enable = false;
+      defaultEditor = true;
+      viAlias = true;
+      vimAlias = true;
+      vimdiffAlias = true;
+    };
     home = {
       packages = with pkgs;[
         swiftlint

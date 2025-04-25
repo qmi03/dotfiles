@@ -26,9 +26,9 @@ fi
 # Init oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/tokyonight_storm.qmi.toml)"
 
-# # Hook direnv
-# export DIRENV_LOG_FORMAT=""
-# eval "$(direnv hook zsh)"
+# Hook direnv
+export DIRENV_LOG_FORMAT=""
+eval "$(direnv hook zsh)"
 # # Check if 'thefuck' is installed
 # if command -v thefuck &> /dev/null; then
 #     eval $(thefuck --alias)
@@ -36,12 +36,15 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/tokyonight_storm.qmi.t
 #     :  # Do nothing if 'thefuck' is not installed
 # fi
 
-# Add zsh plugins
+# Add zsh plugins - load autosuggestions immediately
+zinit for zsh-users/zsh-autosuggestions
+
+# Load other plugins with delay for better startup performance
 zinit lucid wait for \
-  zsh-users/zsh-autosuggestions \
   zsh-users/zsh-completions \
   Aloxaf/fzf-tab \
   MichaelAquilina/zsh-you-should-use
+
 zinit lucid wait='!0' atload'zicompinit; zicdreplay' for zdharma-continuum/fast-syntax-highlighting
 
 
@@ -95,7 +98,8 @@ alias lsa='ls -lAh'
 alias oke="echo oke"
 alias cool="echo cool"
 
-# alias cat='bat -p -P'
+alias cat='bat -p -P'
+
 
 alias antlr4py3='java org.antlr.v4.Tool -Dlanguage=Python3 -o target'
 alias installdir='dirname "$(pwd)"'
@@ -103,6 +107,17 @@ alias pygrun='python3 "$(installdir)"/bin/pygrun'
 alias antlr4='java -jar /usr/local/lib/antlr-4.9.2-complete.jar -o target'
 alias grun='java org.antlr.v4.runtime.misc.TestRig'
 alias dev='nix develop -c $SHELL'
+
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+    alias nvim=nvr -cc split --remote-wait +'set bufhidden=wipe'
+fi
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+    export VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
+    export EDITOR="nvr -cc split --remote-wait +'set bufhidden=wipe'"
+else
+    export VISUAL="nvim"
+    export EDITOR="nvim"
+fi
 
 # Shell integrations
 eval "$(fzf --zsh)"

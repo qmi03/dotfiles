@@ -7,8 +7,8 @@
     ./xdg.nix
     ./locale.nix
     ./news.nix
-    ./configs
     ./packages
+    ../../config
   ];
 
   config.home-manager = {
