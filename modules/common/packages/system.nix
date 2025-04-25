@@ -5,7 +5,6 @@
       curl
       wget
       vim
-      neovim
       git
 
       # Build tools
@@ -25,8 +24,5 @@
       just
     ];
 
-    variables = {
-      EDITOR = lib.getExe pkgs.neovim;
-    };
   };
 }
