@@ -107,6 +107,7 @@ alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-b = 'workspace B' # browser
 alt-c = 'workspace C' # chat
+alt-d = 'workspace D' # dev
 alt-e = 'workspace E' # entertainment
 alt-f = 'workspace F' # files and folders
 alt-g = 'workspace G' # game
@@ -127,6 +128,7 @@ alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-b = 'move-node-to-workspace B'
 alt-shift-c = 'move-node-to-workspace C'
+alt-shift-d = 'move-node-to-workspace D'
 alt-shift-e = 'move-node-to-workspace E'
 alt-shift-f = 'move-node-to-workspace F'
 alt-shift-g = 'move-node-to-workspace G'
@@ -243,27 +245,27 @@ run = 'move-node-to-workspace G'
 # Terminal and Dev stuffs
 [[on-window-detected]]
 if.app-id = 'NULL-APP-BUNDLE-ID'
-run = 'move-node-to-workspace T'
+run = 'move-node-to-workspace D'
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
-run = 'move-node-to-workspace T'
+run = 'move-node-to-workspace D'
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run = 'move-node-to-workspace T'
+run = 'move-node-to-workspace D'
 
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty'
-run = 'move-node-to-workspace T'
+run = 'move-node-to-workspace D'
 
 [[on-window-detected]]
 if.app-id = 'com.openai.chat'
-run = 'move-node-to-workspace T'
+run = 'move-node-to-workspace D'
 
 [[on-window-detected]]
 if.app-id = 'com.vmware.fusion'
-run = 'move-node-to-workspace T'
+run = 'move-node-to-workspace D'
 
 # Productivity
 [[on-window-detected]]
