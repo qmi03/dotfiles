@@ -9,7 +9,7 @@
     # Languages & development
     "swiftformat"
     "unisonlang"
-    "llvm"
+    # "llvm"
 
     # Database
     # "postgresql@17"
@@ -28,5 +28,9 @@
     # "kew" # tui music
     # "mpv"
     # "imagemagick"
+    "ffmpeg"
+
+    # Others
+    "pkhex-cli"
   ];
 }

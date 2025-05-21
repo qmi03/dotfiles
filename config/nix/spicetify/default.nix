@@ -11,23 +11,16 @@ in
       enable = true;
       enabledExtensions = with spicePkgs.extensions; [
         adblockify
-        hidePodcasts
         shuffle
-        skipStats
         keyboardShortcut
         trashbin
-        popupLyrics
         fullAppDisplay
       ];
-      # enabledCustomApps = with spicePkgs.apps; [
-      #   ncsVisualizer
-      #   localFiles
-      #   marketplace
-      #   reddit
-      #   lyricsPlus
-      #   historyInSidebar
-      #   betterLibrary
-      # ];
+      enabledCustomApps = with spicePkgs.apps; [
+        ncsVisualizer
+        marketplace
+        lyricsPlus
+      ];
       theme = spicePkgs.themes.comfy;
     };
   };

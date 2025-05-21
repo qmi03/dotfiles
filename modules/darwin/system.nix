@@ -22,6 +22,7 @@
   };
 
   system = {
+    primaryUser = config.user;
     stateVersion = 5;
     keyboard = {
       remapCapsLockToControl = true;
@@ -73,7 +74,7 @@
       };
 
       finder = {
-        AppleShowAllFiles = true;
+        AppleShowAllFiles = false;
         ShowStatusBar = true;
         ShowPathbar = true;
 
@@ -84,7 +85,7 @@
         FXEnableExtensionChangeWarning = false;
 
         CreateDesktop = true;
-        QuitMenuItem = true;
+        QuitMenuItem = false;
         ShowExternalHardDrivesOnDesktop = true;
         ShowMountedServersOnDesktop = true;
         ShowRemovableMediaOnDesktop = true;

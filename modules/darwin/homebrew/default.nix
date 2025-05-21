@@ -5,6 +5,8 @@
       "nikitabobko/tap" # Aerospace
       "smudge/smudge" # nightlight
       "FelixKratz/formulae" # borders
+      "kegworks-app/kegworks" # kegworks
+      "arleypadua/homebrew-pkhex-cli" # pkhex
     ];
 
     # Configuration for all homebrew

@@ -11,6 +11,7 @@
     "blackhole-2ch"
     "background-music"
     "mos"
+    "audacity"
     # "raycast"
     # "betterdisplay"
     # "dozer"
@@ -30,13 +31,16 @@
 
     # AI/ML
     # "ollama"
+    "Kegworks-App/kegworks/kegworks"
 
     # File management
     "marta"
 
     # Essentials - Browsers & Media
-    "zen-browser@twilight"
+    # "zen-browser@twilight"
     "google-chrome"
+    "discord"
+    "vesktop"
     "iina"
     "qbittorrent"
     "macfuse"
