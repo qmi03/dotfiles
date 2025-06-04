@@ -64,7 +64,7 @@
     php83Packages.php-cs-fixer
 
     ## LSP & Development Tools
-    llvmPackages.clang-tools
+    ## llvmPackages.clang-tools
     llvmPackages.clang
   ];
 }

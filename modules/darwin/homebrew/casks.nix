@@ -45,5 +45,6 @@
     "qbittorrent"
     "macfuse"
     "soulseek"
+    "ultimate-vocal-remover"
   ];
 }

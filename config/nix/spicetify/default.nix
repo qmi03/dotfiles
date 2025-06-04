@@ -12,16 +12,21 @@ in
       enabledExtensions = with spicePkgs.extensions; [
         adblockify
         shuffle
-        keyboardShortcut
+        loopyLoop
+        powerBar
         trashbin
         fullAppDisplay
+        fullAlbumDate
+        betterGenres
+        lastfm
+        volumePercentage
       ];
       enabledCustomApps = with spicePkgs.apps; [
         ncsVisualizer
         marketplace
         lyricsPlus
       ];
-      theme = spicePkgs.themes.comfy;
+      theme = spicePkgs.themes.dribbblishDynamic;
     };
   };
 }

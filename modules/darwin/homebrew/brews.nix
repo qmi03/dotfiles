@@ -9,7 +9,7 @@
     # Languages & development
     "swiftformat"
     "unisonlang"
-    # "llvm"
+    "llvm"
 
     # Database
     # "postgresql@17"

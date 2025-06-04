@@ -5,8 +5,6 @@
 
     # Note-taking & Productivity
     obsidian
-
-    # Gaming
-    melonDS
+    anki-bin
   ];
 }

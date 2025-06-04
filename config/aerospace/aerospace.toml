@@ -147,7 +147,7 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
 
-alt-space = 'mode application'
+alt-shift-space = 'mode application'
 [mode.application.binding]
 esc = ['reload-config', 'mode main']
 enter = ['''exec-and-forget osascript -e '
@@ -257,6 +257,14 @@ run = 'move-node-to-workspace G'
 if.app-id = 'org.openemu.OpenEmu'
 run = 'move-node-to-workspace G'
 
+[[on-window-detected]]
+if.app-id = 'com.citra-emu.citra'
+run = 'move-node-to-workspace G'
+
+[[on-window-detected]]
+if.app-id = 'org.azahar-emu.azahar'
+run = 'move-node-to-workspace G'
+
 # Terminal and Dev stuffs
 [[on-window-detected]]
 if.app-id = 'NULL-APP-BUNDLE-ID'
@@ -285,6 +293,10 @@ run = 'move-node-to-workspace D'
 # Productivity
 [[on-window-detected]]
 if.app-id = 'com.apple.iCal'
+run = 'move-node-to-workspace P'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.reminders'
 run = 'move-node-to-workspace P'
 
 [[on-window-detected]]
