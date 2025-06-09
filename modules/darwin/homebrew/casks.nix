@@ -13,7 +13,6 @@
     "mos"
     "audacity"
     # "raycast"
-    # "betterdisplay"
     # "dozer"
 
     # Development
