@@ -2,6 +2,7 @@
   home-manager.users.${config.user}.home.packages = with pkgs; [
     # Development Tools
     nushell
+    fish
     direnv
     lazygit
     git
@@ -52,6 +53,9 @@
 
     ## Zig
     zig
+
+    ## Ruby
+    ruby
 
     ## Lua
     lua

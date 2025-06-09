@@ -10,6 +10,8 @@
     "swiftformat"
     "unisonlang"
     "llvm"
+    "swiftly"
+    "xcbeautify"
 
     # Database
     # "postgresql@17"
