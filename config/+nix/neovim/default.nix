@@ -21,7 +21,6 @@
         nil
         nixpkgs-fmt
         prettierd
-        rust-analyzer
         svelte-language-server
         taplo
         typescript-language-server

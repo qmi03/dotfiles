@@ -57,6 +57,9 @@
     ## Ruby
     ruby
 
+    ## Rust
+    rustup
+
     ## Lua
     lua
 
