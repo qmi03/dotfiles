@@ -29,7 +29,6 @@
         checkmake
         markdownlint-cli
         texlab
-        bash-language-server
         tailwindcss-language-server
         # typst
         tinymist
