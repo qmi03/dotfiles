@@ -1,15 +1,16 @@
 { config, pkgs, ... }: {
   home-manager.users.${config.user}.home.packages = with pkgs; [
     # Development Tools
-    nushell
     fish
     direnv
     lazygit
     git
-    lazydocker
     socat
     cmake
     pkg-config
+    scrcpy
+    android-tools
+
 
     # Terminal Utilities
     bat
@@ -20,7 +21,6 @@
     fzf
     btop
     zoxide
-    jq
     oh-my-posh
 
     # Text Editors/IDEs
@@ -30,6 +30,7 @@
     # Programming Languages & Tools
     ## Typesetting
     typst
+    typsite
 
     ## Haskell
     ghc
@@ -64,11 +65,11 @@
     lua
 
     ## PHP
-    php
-    php83Packages.composer
-    intelephense
-    phpactor
-    php83Packages.php-cs-fixer
+    # php
+    # php83Packages.composer
+    # intelephense
+    # phpactor
+    # php83Packages.php-cs-fixer
 
     ## LSP & Development Tools
     ## llvmPackages.clang-tools

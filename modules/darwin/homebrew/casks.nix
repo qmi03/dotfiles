@@ -8,8 +8,8 @@
     "omnidisksweeper"
     "karabiner-elements"
     # "alt-tab"
-    "blackhole-2ch"
-    "background-music"
+    # "blackhole-2ch"
+    # "background-music"
     "mos"
     "audacity"
     # "raycast"
@@ -23,21 +23,20 @@
     "wireshark"
 
     # Media creation
-    "inkscape"
+    # "inkscape"
     "obs"
-    "gimp"
-    "lmms"
+    ##"gimp"
+    ##"lmms"
 
     # AI/ML
     # "ollama"
-    "Kegworks-App/kegworks/kegworks"
 
     # File management
     "marta"
 
     # Essentials - Browsers & Media
     # "zen-browser@twilight"
-    "google-chrome"
+    "eloston-chromium"
     "discord"
     "vesktop"
     "iina"
@@ -45,5 +44,6 @@
     "macfuse"
     "soulseek"
     "ultimate-vocal-remover"
+    # "Kegworks-App/kegworks/kegworks"
   ];
 }

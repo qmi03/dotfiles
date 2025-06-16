@@ -11,15 +11,6 @@
       cmake
       pkg-config
 
-      # System tools
-      qemu
-
-      # Documentation
-      tldr
-
-      # Mac-specific
-      mkalias
-
       # Task runners
       just
     ];

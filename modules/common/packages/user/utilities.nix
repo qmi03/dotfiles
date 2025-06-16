@@ -8,17 +8,9 @@
     lolcat
     cmatrix
     nyancat
-
-    # System Utilities
-    qemu
-    libusb1
-    thc-hydra
-
-    # File Management
-    localsend
+    fd
 
     # Terminal Emulators
     kitty
-    wezterm
   ];
 }

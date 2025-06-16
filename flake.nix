@@ -36,7 +36,10 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     catppuccin.url = "github:catppuccin/nix";
+
+    typsite.url = "github:Glomzzz/typsite";
   };
 
   outputs = inputs:
