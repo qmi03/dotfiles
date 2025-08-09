@@ -16,7 +16,7 @@ in
   # They are a way to modify the packages availabe to you inside the `pkgs` argument of modules.
   # Referrence on them can be foung here: https://nixos.wiki/wiki/Overlays
   nixpkgs.overlays = [
-    (_:prev: {
+    (final: prev: {
       # inherit (stable-darwin)
       #   # Get specific packages from stable-darwin
       #   anki;

@@ -7,6 +7,7 @@
     "openkey"
     "omnidisksweeper"
     "karabiner-elements"
+    "reminders-menubar"
     # "alt-tab"
     # "blackhole-2ch"
     # "background-music"
@@ -17,10 +18,10 @@
 
     # Development
     "ghostty"
-    "docker"
+    # "docker"
 
     # Network tools
-    "wireshark"
+    # "wireshark"
 
     # Media creation
     # "inkscape"
@@ -36,11 +37,12 @@
 
     # Essentials - Browsers & Media
     # "zen-browser@twilight"
-    "eloston-chromium"
+    # "eloston-chromium"
     "discord"
     "vesktop"
     "iina"
     "qbittorrent"
+    # "deluge"
     "macfuse"
     "soulseek"
     "ultimate-vocal-remover"
