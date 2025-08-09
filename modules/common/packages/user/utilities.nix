@@ -9,6 +9,7 @@
     cmatrix
     nyancat
     fd
+    speedtest-go
 
     # Terminal Emulators
     kitty
