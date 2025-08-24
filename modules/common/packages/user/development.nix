@@ -43,8 +43,6 @@
 
     ## C/C++/Python
     mpich
-    pixi
-    uv
 
     ## Javascript
     nodejs
