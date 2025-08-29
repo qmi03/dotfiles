@@ -34,5 +34,6 @@
 
     # Others
     "pkhex-cli"
+    "kanata"
   ];
 }

@@ -25,7 +25,7 @@
     primaryUser = config.user;
     stateVersion = 5;
     keyboard = {
-      remapCapsLockToControl = true;
+      remapCapsLockToControl = false;
       enableKeyMapping = true;
     };
     defaults = {
@@ -65,7 +65,7 @@
         FXEnableExtensionChangeWarning = false;
 
         CreateDesktop = true;
-        QuitMenuItem = false;
+        QuitMenuItem = true;
         ShowExternalHardDrivesOnDesktop = true;
         ShowMountedServersOnDesktop = true;
         ShowRemovableMediaOnDesktop = true;

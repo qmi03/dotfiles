@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   homebrew.casks = [
     # System utilities
     "aerospace"
@@ -8,7 +9,7 @@
     "omnidisksweeper"
     "karabiner-elements"
     "reminders-menubar"
-    # "alt-tab"
+    "alt-tab"
     # "blackhole-2ch"
     # "background-music"
     "mos"
@@ -30,18 +31,18 @@
     ##"lmms"
 
     # AI/ML
-    # "ollama"
 
     # File management
     "marta"
+    "keka"
 
     # Essentials - Browsers & Media
     # "zen-browser@twilight"
     # "eloston-chromium"
-    "discord"
     "vesktop"
     "iina"
     "qbittorrent"
+    "subler"
     # "deluge"
     "macfuse"
     "soulseek"
