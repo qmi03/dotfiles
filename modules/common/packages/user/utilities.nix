@@ -10,5 +10,7 @@
     nyancat
     fd
     speedtest-go
+    aria2
+    p7zip
   ];
 }
