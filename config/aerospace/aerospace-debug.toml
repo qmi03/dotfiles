@@ -339,7 +339,7 @@ if.app-id = 'com.apple.finder'
 run = 'move-node-to-workspace F'
 
 [[on-window-detected]]
-if.app-id = 'org.yandex.marta'
+if.app-id = 'org.yanex.marta'
 run = 'move-node-to-workspace F'
 
 [[on-window-detected]]
