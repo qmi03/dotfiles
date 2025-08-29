@@ -1,0 +1,6 @@
+(defsrc
+  caps)
+(deflayermap (default-layer)
+  ;; tap caps lock as caps lock, hold caps lock as left control
+  caps (tap-hold-press 70 70 caps lctl)
+)
