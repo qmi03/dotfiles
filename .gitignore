@@ -3,3 +3,4 @@ zen-browser-profiles
 config/lazygit/state.yml
 config/lazygit/config.yml
 config/tmux/plugins
+digest.txt
