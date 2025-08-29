@@ -108,16 +108,6 @@ alias antlr4='java -jar /usr/local/lib/antlr-4.9.2-complete.jar -o target'
 alias grun='java org.antlr.v4.runtime.misc.TestRig'
 alias dev='nix develop -c $SHELL'
 
-if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
-    alias nvim=nvr -cc split --remote-wait +'set bufhidden=wipe'
-fi
-if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
-    export VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
-    export EDITOR="nvr -cc split --remote-wait +'set bufhidden=wipe'"
-else
-    export VISUAL="nvim"
-    export EDITOR="nvim"
-fi
 
 # Shell integrations
 eval "$(fzf --zsh)"
