@@ -2,7 +2,7 @@
 {
   home-manager.users.${config.user} = {
     programs.sioyek = {
-      enable = false;
+      enable = true;
       bindings = {
         "move_up" = "k";
         "move_down" = "j";

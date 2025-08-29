@@ -4,7 +4,8 @@ let
   # The names are the same as the attribute names of the inputs in flake.nix.
   inherit (inputs)
     nixpkgs-stable-darwin
-    typsite;
+    typsite
+    ;
   # Nixpkgs unstable is just a flake, and to get the actual nixpkgs package set,
   # you need to import it. In case you are curious how this works, `import nixpkgs-unstable`
   # evaluates https://github.com/NixOS/nixpkgs/blob/master/default.nix,
@@ -17,9 +18,10 @@ in
   # Referrence on them can be foung here: https://nixos.wiki/wiki/Overlays
   nixpkgs.overlays = [
     (final: prev: {
-      # inherit (stable-darwin)
-      #   # Get specific packages from stable-darwin
-      #   anki;
+      inherit (stable-darwin)
+        # Get specific packages from stable-darwin
+        julia-bin
+        ;
       typsite = inputs.typsite.packages.${prev.system}.default;
     })
   ];

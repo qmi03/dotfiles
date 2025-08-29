@@ -10,7 +10,7 @@ inputs.nix-darwin.lib.darwinSystem {
       home-manager.useUserPackages = true;
       home-manager.extraSpecialArgs = { inherit inputs; };
       home-manager.users.${globals.user}.imports = [
-        inputs.nix-index-database.hmModules.nix-index
+        inputs.nix-index-database.homeModules.nix-index
         inputs.catppuccin.homeModules.catppuccin
       ];
     }
