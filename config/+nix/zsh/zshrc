@@ -197,8 +197,11 @@ function tds() {
 
 # Auto-start tmux after zsh loads
 if [[ -z "$TMUX" && -z "$INSIDE_EMACS" && -z "$VIM" ]]; then
-  # Try to attach to existing, or start directory session
-  tmux attach 2>/dev/null || tds
+  if tmux has-session 2>/dev/null && [[ $(tmux list-sessions 2>/dev/null | wc -l) -gt 1 ]]; then
+    tmux attach \; choose-tree -sZ -O time
+  else
+    tmux attach 2>/dev/null || tds
+  fi
 fi
 ################################################################################ 
 
