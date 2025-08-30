@@ -192,7 +192,17 @@ function tds() {
   local dir=${PWD##*/}
   local md5=$(printf '%s' "$PWD" | md5sum | cut -d ' ' -f 1)
   local session_name="${dir}-${md5:0:6}"
-  tmux new -As "$session_name"
+ 
+  # Create session if it doesn't exist (detached)
+  tmux has-session -t "$session_name" 2>/dev/null || tmux new-session -d -s "$session_name" -c "$PWD"
+ 
+  if [[ -n "$TMUX" ]]; then
+    # Switch to the session
+    tmux switch-client -t "$session_name"
+  else
+    # Attach to the session
+    tmux attach-session -t "$session_name"
+  fi
 }
 
 # Auto-start tmux after zsh loads
