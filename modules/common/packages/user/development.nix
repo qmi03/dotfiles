@@ -1,16 +1,18 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   home-manager.users.${config.user}.home.packages = with pkgs; [
     # Development Tools
     fish
     direnv
     lazygit
     git
+    pre-commit
     socat
     cmake
     pkg-config
     scrcpy
     android-tools
-
+    silicon
 
     # Terminal Utilities
     bat

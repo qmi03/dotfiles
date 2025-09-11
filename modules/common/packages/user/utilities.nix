@@ -12,5 +12,7 @@
     speedtest-go
     aria2
     p7zip
+    torsocks
+    wget2
   ];
 }

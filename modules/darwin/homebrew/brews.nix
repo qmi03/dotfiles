@@ -5,6 +5,7 @@
     "exercism"
     "coursier"
     "gh"
+    "tor"
 
     # Languages & development
     "swiftformat"

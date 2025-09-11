@@ -47,6 +47,7 @@
     "macfuse"
     "soulseek"
     "ultimate-vocal-remover"
+    "folo"
     # "Kegworks-App/kegworks/kegworks"
   ];
 }
