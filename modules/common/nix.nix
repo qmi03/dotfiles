@@ -8,6 +8,7 @@
     };
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
+      download-buffer-size = 20971520;
       warn-dirty = false;
     };
   };
