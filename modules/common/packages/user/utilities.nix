@@ -14,5 +14,6 @@
     p7zip
     torsocks
     wget2
+    yt-dlp
   ];
 }

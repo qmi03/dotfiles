@@ -9,7 +9,6 @@
     pre-commit
     socat
     cmake
-    pkg-config
     scrcpy
     android-tools
     silicon
@@ -44,7 +43,6 @@
     go
 
     ## C/C++/Python
-    mpich
 
     ## Javascript
     nodejs
@@ -73,6 +71,6 @@
 
     ## LSP & Development Tools
     ## llvmPackages.clang-tools
-    llvmPackages.clang
+    ## llvmPackages.clang
   ];
 }
