@@ -1,4 +1,5 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, ... }:
+{
   environment = {
     systemPackages = with pkgs; [
       # Core utilities
@@ -14,6 +15,5 @@
       # Task runners
       just
     ];
-
   };
 }

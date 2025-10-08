@@ -29,6 +29,7 @@ inputs.nix-darwin.lib.darwinSystem {
         autoMigrate = true;
       };
     }
+    ../../modules/common
     ../../modules/darwin
   ];
 }
