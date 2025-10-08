@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   homebrew.brews = [
     # Package managers & CLI tools
     "mas"
@@ -13,6 +14,8 @@
     "llvm"
     "swiftly"
     "xcbeautify"
+    "mpich"
+    "pkg-config"
 
     # Database
     # "postgresql@17"

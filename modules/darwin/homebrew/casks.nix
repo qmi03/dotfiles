@@ -16,10 +16,11 @@
     "audacity"
     # "raycast"
     # "dozer"
+    # "jordanbaird-ice"
 
     # Development
     "ghostty"
-    # "docker"
+    "utm"
 
     # Network tools
     # "wireshark"
@@ -48,6 +49,7 @@
     "soulseek"
     "ultimate-vocal-remover"
     "folo"
+    "sioyek"
     # "Kegworks-App/kegworks/kegworks"
   ];
 }
