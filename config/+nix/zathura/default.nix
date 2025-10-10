@@ -1,4 +1,5 @@
-{ config, ... }: {
+{ config, ... }:
+{
   home-manager.users.${config.user}.programs.zathura = {
     enable = true;
     mappings = {
@@ -25,19 +26,29 @@
     };
     extraConfig = ''
       # Enable copy to clipboard with mouse selection
-      set selection-notification false
+      set selection-notification true
 
       set selection-clipboard "clipboard"
-      set window-title-basename true
+      set window-title-basename false
       set adjust-open "best-fit"
       set page-padding 1
       set scroll-step 100
       set scroll-hstep 100
       set zoom-step 5
+      set zoom-center true
       set show-hidden true
       set font "monospace normal 18"
       set render-loading true
       set database "sqlite"
+
+      set recolor-keephue true
+      set recolor-adjust-lightness true
+      set statusbar-page-percent true
+      set statusbar-home-tilde true
+      set window-title-home-tilde true
+      set page-cache-size 30
+      set page-thumbnail-size 8388608
+      set guioptions ""
     '';
   };
 }
