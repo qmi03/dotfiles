@@ -9,11 +9,13 @@
       vimdiffAlias = true;
     };
     home = {
-      packages = with pkgs;[
+      packages = with pkgs; [
+        astro-language-server
+        marksman
+        mdx-language-server
         swiftlint
         cmake-language-server
         cmake
-        emmet-language-server
         eslint_d
         gopls
         jdt-language-server
@@ -32,6 +34,7 @@
         tailwindcss-language-server
         # typst
         tinymist
+        typstfmt
         typstyle
         # lua
         lua-language-server
