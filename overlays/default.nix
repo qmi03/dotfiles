@@ -16,7 +16,24 @@ in
         # Get specific packages from stable-darwin
         julia-bin
         ;
+      tmux = prev.tmux.overrideAttrs (old: {
+        src = inputs.tmux-git;
+        version = "git-${inputs.tmux-git.shortRev or "dirty"}";
+
+        # tmux needs autogen to be run for git builds
+        preConfigure = ''
+          sh autogen.sh
+        '';
+
+        # Add autoconf/automake to build inputs
+        nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [
+          final.autoconf
+          final.automake
+          final.pkg-config
+        ];
+      });
       typsite = inputs.typsite.packages.${prev.system}.default;
     })
+    inputs.neovim-nightly-overlay.overlays.default
   ];
 }
