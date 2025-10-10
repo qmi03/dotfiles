@@ -48,8 +48,12 @@ zinit snippet OMZP::command-not-found
 export PATH="$PATH:/Users/qmi/.local/bin"
 
 
-autoload -U compinit && compinit -C
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
+  autoload -Uz compinit
+  compinit
+fi
 
 zinit cdreplay -q
 
@@ -159,7 +163,7 @@ function _build_tmux_alias {
       tmux $2 $3 \"\$@\"
     fi
   }"
-  
+ 
   # Set up tab completion
   local f s
   f="_tmux_alias_${1}"
@@ -210,7 +214,7 @@ if [[ -z "$TMUX" && -z "$INSIDE_EMACS" && -z "$VIM" && "$__CFBundleIdentifier" !
   if tmux has-session 2>/dev/null && [[ $(tmux list-sessions 2>/dev/null | wc -l) -gt 1 ]]; then
     tmux attach \; choose-tree -sZ -O time
   else
-    tmux attach 2>/dev/null || tds
+    tmux attach 2>/dev/null || cd ~/dotfiles && tds
   fi
 fi
 ################################################################################ 
@@ -244,4 +248,5 @@ export PATH="$HOME/zig-bootstrap-0.14.0-dev.2064+b5cafe223/out/zig-aarch64-macos
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+export CPLUS_INCLUDE_PATH="/opt/homebrew/opt/llvm/include/"
 export NIXPKGS_ALLOW_UNFREE=1
