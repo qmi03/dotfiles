@@ -18,6 +18,15 @@ console_title_template = ' {{ .Folder }} :: {{if .Root}}Admin{{end}}'
     NameLength = 0
 
   [[blocks.segments]]
+    type = 'session'
+    style = 'plain'
+    template = '{{ .UserName }}@{{ .HostName }} '
+    foreground = 'p:blue'
+    Text = ''
+    Duration = 0
+    NameLength = 0
+
+  [[blocks.segments]]
     type = 'path'
     style = 'plain'
     template = '<b>{{ .Path }}</b> <p:light-sky-blue> </>'
