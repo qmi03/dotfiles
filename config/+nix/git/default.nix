@@ -2,10 +2,13 @@
   home-manager.users.${config.user}.programs.git = {
     enable = true;
 
-    userName = "qmi";
-    userEmail = "minh.pham1126@gmail.com";
+    settings = {
+      user = {
+        name = "qmi";
+        email = "minh.pham1126@gmail.com";
+        useConfigOnly = true;
+      };
 
-    extraConfig = {
       branch.autosetuprebase = "always";
 
       core = {
@@ -21,8 +24,6 @@
         autostash = true;
         autosquash = true;
       };
-
-      user.useConfigOnly = true;
     };
 
     ignores = [
@@ -32,6 +33,5 @@
       "*.log"
       ".DS_Store"
     ];
-
   };
 }

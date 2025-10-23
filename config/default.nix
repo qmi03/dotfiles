@@ -4,7 +4,6 @@
     ./+nix/btop
     ./+nix/zsh
     ./+nix/catppuccin
-    ./+nix/oh-my-posh
     ./+nix/sioyek
     ./+nix/bat
     ./+nix/bottom

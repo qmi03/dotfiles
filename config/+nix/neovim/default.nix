@@ -42,7 +42,7 @@
         # yaml
         yamlfmt
         # docker
-        dockerfile-language-server-nodejs
+        dockerfile-language-server
         docker-compose-language-service
         # python
         python312Packages.python-lsp-server

@@ -12,7 +12,7 @@ in
       inputs.spicetify-nix.homeManagerModules.spicetify
     ];
     programs.spicetify = {
-      enable = true;
+      enable = false;
       enabledExtensions = with spicePkgs.extensions; [
         adblockify
         shuffle
