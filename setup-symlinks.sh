@@ -29,7 +29,7 @@ fi
 dirs_are_different() {
     source_dir="$1"
     target_dir="$2"
-    
+
     if [ $HAS_RSYNC -eq 1 ]; then
         # Use rsync's dry-run to check for differences
         # The --checksum option forces file checksum comparison instead of just size and mod-time
@@ -55,7 +55,7 @@ dirs_are_different() {
 create_symlink() {
     source="$1"
     target="$2"
-    
+
     # Check if target already exists
     if [ -e "$target" ]; then
         # If it's already a symlink to our source, skip
@@ -63,7 +63,7 @@ create_symlink() {
             echo "✓ Symlink already exists: $target → $source"
             return
         fi
-        
+
         # If target is a directory and not a symlink, check contents
         if [ -d "$target" ] && [ ! -L "$target" ]; then
             dirs_are_different "$source" "$target"
@@ -84,7 +84,7 @@ create_symlink() {
             mv "$target" "$backup"
         fi
     fi
-    
+
     # Create the symlink
     ln -s "$source" "$target"
     echo "✓ Created symlink: $target → $source"
@@ -97,7 +97,7 @@ for dir in "$CONFIG_DIR"/*; do
     if [ -d "$dir" ]; then
         dirname=$(basename "$dir")
         target="$HOME/.config/$dirname"
-        
+
         create_symlink "$dir" "$target"
     fi
 done

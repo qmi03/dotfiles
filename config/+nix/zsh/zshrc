@@ -22,6 +22,7 @@ if [ ! -d "$TPM_HOME" ]; then
   echo "Don't forget to add the tpm configuration to your ~/.tmux.conf file!"
 fi
 
+autoload -U compinit && compinit
 
 # Init oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/tokyonight_storm.qmi.toml)"
@@ -98,11 +99,6 @@ alias cool="echo cool"
 alias cat='bat -p -P'
 
 
-alias antlr4py3='java org.antlr.v4.Tool -Dlanguage=Python3 -o target'
-alias installdir='dirname "$(pwd)"'
-alias pygrun='python3 "$(installdir)"/bin/pygrun'
-alias antlr4='java -jar /usr/local/lib/antlr-4.9.2-complete.jar -o target'
-alias grun='java org.antlr.v4.runtime.misc.TestRig'
 alias dev='nix develop -c $SHELL'
 
 
@@ -210,7 +206,7 @@ function tds() {
 }
 
 # Auto-start tmux after zsh loads
-if [[ -z "$TMUX" && -z "$INSIDE_EMACS" && -z "$VIM" && "$__CFBundleIdentifier" != "org.yanex.marta" ]]; then
+if [[ -z "$TMUX" && -z "$INSIDE_EMACS" && -z "$VIM" && "$__CFBundleIdentifier" != "org.yanex.marta" && -z "$SSH_CONNECTION" ]]; then
   if tmux has-session 2>/dev/null && [[ $(tmux list-sessions 2>/dev/null | wc -l) -gt 1 ]]; then
     tmux attach \; choose-tree -sZ -O time
   else
@@ -224,10 +220,6 @@ fi
 
 # Ollama
 export OLLAMA_HOST=localhost:11435
-
-# ANTLR
-export ANTLR_JAR=/usr/local/lib/antlr-4.9.2-complete.jar
-export CLASSPATH=".:/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH"
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm/bin"
