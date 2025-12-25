@@ -15,5 +15,7 @@
     torsocks
     wget2
     yt-dlp
+    mpv
+    tldr
   ];
 }

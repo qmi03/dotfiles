@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   home-manager.users.${config.user} = {
     fonts.fontconfig = {
       enable = true;
@@ -15,6 +16,7 @@
       input-fonts
       joypixels
       nerd-fonts.jetbrains-mono
+      sarasa-gothic
       open-sans
     ];
   };

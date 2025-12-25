@@ -12,7 +12,7 @@ in
       inputs.spicetify-nix.homeManagerModules.spicetify
     ];
     programs.spicetify = {
-      enable = false;
+      enable = true;
       enabledExtensions = with spicePkgs.extensions; [
         adblockify
         shuffle
@@ -30,7 +30,7 @@ in
         marketplace
         lyricsPlus
       ];
-      theme = spicePkgs.themes.dribbblishDynamic;
+      theme = spicePkgs.themes.default;
     };
   };
 }

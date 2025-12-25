@@ -1,12 +1,9 @@
 #!/bin/bash
 
-# Enhanced script to create symlinks from ~/dotfiles/config/* to ~/.config/
-# Now with recursive content comparison before creating backups
+# Create symlinks from ~/dotfiles/config/* to ~/.config/
 
-# Ensure ~/.config directory exists
 mkdir -p ~/.config
 
-# Get the absolute path to dotfiles directory
 DOTFILES_DIR="$HOME/dotfiles"
 CONFIG_DIR="$DOTFILES_DIR/config"
 
@@ -16,7 +13,6 @@ if [ ! -d "$CONFIG_DIR" ]; then
     exit 1
 fi
 
-# Check if rsync is installed
 if ! command -v rsync &> /dev/null; then
     echo "Warning: rsync not found. Will fall back to simpler comparison."
     HAS_RSYNC=0
@@ -51,14 +47,11 @@ dirs_are_different() {
     fi
 }
 
-# Function to create a symlink
 create_symlink() {
     source="$1"
     target="$2"
 
-    # Check if target already exists
     if [ -e "$target" ]; then
-        # If it's already a symlink to our source, skip
         if [ -L "$target" ] && [ "$(readlink "$target")" = "$source" ]; then
             echo "✓ Symlink already exists: $target → $source"
             return

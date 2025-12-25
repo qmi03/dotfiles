@@ -32,6 +32,7 @@
       "node_modules"
       "*.log"
       ".DS_Store"
+      "digest.txt"
     ];
   };
 }

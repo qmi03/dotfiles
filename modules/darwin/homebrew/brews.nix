@@ -7,6 +7,7 @@
     "coursier"
     "gh"
     "tor"
+    "lima"
 
     # Languages & development
     "swiftformat"
@@ -16,6 +17,9 @@
     "xcbeautify"
     "mpich"
     "pkg-config"
+    "zig"
+    "glfw"
+    "glm"
 
     # Database
     # "postgresql@17"

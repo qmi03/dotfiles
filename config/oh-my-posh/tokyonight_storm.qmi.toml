@@ -23,13 +23,13 @@ final_space = true
   white-blue = '#a5dfd5'
 
 [secondary_prompt]
-  template = '➜ '
+  template = ';'
   foreground = 'p:terminal-blue'
   background = 'transparent'
 
-[transient_prompt]
-  template = '➜ '
-  foreground = 'p:terminal-blue'
+##[transient_prompt]
+##  template = ';'
+##  foreground = 'p:terminal-blue'
 
 [[blocks]]
   type = 'prompt'
@@ -180,7 +180,7 @@ final_space = true
   newline = true
 
   [[blocks.segments]]
-    template = '➜'
+    template = ';'
     foreground = 'p:pistachio-green'
     type = 'text'
     style = 'plain'

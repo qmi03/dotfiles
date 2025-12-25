@@ -50,7 +50,7 @@
     bun
 
     ## Zig
-    zig
+    ## zig
 
     ## Ruby
     ruby
