@@ -185,6 +185,10 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # Browsers
 [[on-window-detected]]
+if.app-id = 'net.imput.helium'
+run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
 run = 'move-node-to-workspace B'
 

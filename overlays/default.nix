@@ -14,7 +14,7 @@ in
     (final: prev: {
       inherit (stable-darwin)
         # Get specific packages from stable-darwin
-        julia-bin
+        # julia-bin
         ;
       tmux = prev.tmux.overrideAttrs (old: {
         src = inputs.tmux-git;

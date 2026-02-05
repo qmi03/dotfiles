@@ -34,7 +34,6 @@
         tailwindcss-language-server
         # typst
         tinymist
-        typstfmt
         typstyle
         # lua
         lua-language-server
