@@ -1,0 +1,41 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'christoomey/vim-tmux-navigator'
+
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+
+Plug 'tpope/vim-vinegar'
+
+call plug#end()
+
+set relativenumber number
+set tabstop=2 shiftwidth=2 softtabstop=2 expandtab autoindent
+set nowrap
+set colorcolumn=80
+set breakindent
+set ignorecase smartcase
+set cursorline
+set termguicolors background=dark signcolumn=number
+set backspace=indent,eol,start
+set clipboard+=unnamedplus
+set splitright splitbelow
+set undofile
+set updatetime=250 timeoutlen=300
+set noswapfile
+set confirm
+set scrolloff=16 sidescrolloff=16
+set mouse=a
+
+syntax enable
+
+let mapleader = ' '
+nnoremap W :write<CR>
+xnoremap <leader>p "_dP
+command! CopyFilePath let @+ = expand('%:p')
+autocmd TextYankPost * silent! lua vim.highlight.on_yank()
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+
+colorscheme catppuccin_mocha
