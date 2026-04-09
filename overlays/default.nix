@@ -4,7 +4,7 @@ let
   # you need to import it. In case you are curious how this works, `import nixpkgs-unstable`
   # evaluates https://github.com/NixOS/nixpkgs/blob/master/default.nix,
   # and then we call the result of that import with an attrset that contains the value system.
-  stable-darwin = import inputs.nixpkgs-stable-darwin { inherit (pkgs) system; };
+  stable-darwin = import inputs.nixpkgs-stable-darwin { inherit (pkgs.stdenv.hostPlatform) system; };
 in
 {
   # Thise is where we can put our overlays.
@@ -32,7 +32,7 @@ in
           final.pkg-config
         ];
       });
-      typsite = inputs.typsite.packages.${prev.system}.default;
+      typsite = inputs.typsite.packages.${prev.stdenv.hostPlatform.system}.default;
     })
     inputs.neovim-nightly-overlay.overlays.default
   ];
