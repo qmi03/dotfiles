@@ -4,3 +4,9 @@ config/lazygit/state.yml
 config/lazygit/config.yml
 config/tmux/plugins
 digest.txt
+
+# Vim / netrw temp + history + autoload
+.netrwhist
+.netrwhist.un~
+*.un~
+autoload/

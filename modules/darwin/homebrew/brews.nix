@@ -4,7 +4,6 @@
     # Package managers & CLI tools
     "mas"
     "exercism"
-    "coursier"
     "gh"
     "tor"
     "lima"

@@ -3,9 +3,5 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
 
-# >>> coursier install directory >>>
-export PATH="$PATH:/Users/qmi/Library/Application Support/Coursier/bin"
-# <<< coursier install directory <<<
-
 # Added by swiftly
 . "/Users/qmi/.swiftly/env.sh"
