@@ -11,6 +11,7 @@
     cmake
     scrcpy
     android-tools
+    qemu
     silicon
 
     # Terminal Utilities

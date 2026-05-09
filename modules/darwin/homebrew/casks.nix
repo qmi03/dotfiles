@@ -21,6 +21,7 @@
     # Development
     "ghostty"
     "utm"
+    "godot"
 
     # Network tools
     # "wireshark"
@@ -43,10 +44,11 @@
     "vesktop"
     "iina"
     "qbittorrent"
+    "transmission"
     "subler"
     # "deluge"
     "macfuse"
-    "soulseek"
+    # "soulseek"
     "ultimate-vocal-remover"
     "folo"
     "sioyek"

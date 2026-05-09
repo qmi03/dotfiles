@@ -19,6 +19,7 @@
     "zig"
     "glfw"
     "glm"
+    "podman"
 
     # Database
     # "postgresql@17"

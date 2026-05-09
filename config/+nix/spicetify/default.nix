@@ -30,7 +30,7 @@ in
         marketplace
         lyricsPlus
       ];
-      theme = spicePkgs.themes.default;
+      theme = spicePkgs.themes.dribbblishDynamic;
     };
   };
 }
