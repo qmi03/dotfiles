@@ -8,6 +8,7 @@
     lolcat
     cmatrix
     nyancat
+    ffmpeg
     fd
     speedtest-go
     aria2

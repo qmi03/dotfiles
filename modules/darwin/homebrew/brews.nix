@@ -38,7 +38,6 @@
     # "kew" # tui music
     # "mpv"
     # "imagemagick"
-    "ffmpeg"
 
     # Others
     "pkhex-cli"
