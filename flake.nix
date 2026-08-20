@@ -41,11 +41,6 @@
 
     typsite.url = "github:Glomzzz/typsite";
 
-    tmux-git = {
-      url = "github:tmux/tmux";
-      flake = false;
-    };
-
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
