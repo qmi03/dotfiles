@@ -17,5 +17,6 @@
     yt-dlp
     mpv
     tldr
+    hblock
   ];
 }

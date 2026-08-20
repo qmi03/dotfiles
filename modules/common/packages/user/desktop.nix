@@ -6,5 +6,6 @@
     # Note-taking & Productivity
     obsidian
     anki-bin
+    signal-desktop
   ];
 }
