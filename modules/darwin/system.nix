@@ -33,7 +33,7 @@
     primaryUser = config.user;
     stateVersion = 5;
     keyboard = {
-      remapCapsLockToControl = false;
+      remapCapsLockToControl = true;
       enableKeyMapping = true;
     };
     defaults = {
