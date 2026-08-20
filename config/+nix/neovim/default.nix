@@ -44,11 +44,11 @@
         dockerfile-language-server
         docker-compose-language-service
         # python
-        python312Packages.python-lsp-server
-        python312Packages.jedi
-        python312Packages.pylsp-mypy
+        python314Packages.python-lsp-server
+        python314Packages.jedi
+        # python314Packages.pylsp-mypy
         ruff
-        mypy
+        python314Packages.mypy
         isort
 
         # php
