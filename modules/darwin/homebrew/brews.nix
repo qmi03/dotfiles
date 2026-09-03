@@ -20,6 +20,7 @@
     "glfw"
     "glm"
     "podman"
+    "openjdk@21"
 
     # Database
     # "postgresql@17"

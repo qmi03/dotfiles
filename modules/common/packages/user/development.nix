@@ -13,6 +13,7 @@
     android-tools
     qemu
     silicon
+    forgejo-runner
 
     # Terminal Utilities
     bat
