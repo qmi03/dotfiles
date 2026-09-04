@@ -17,7 +17,7 @@
         editor = "nvim";
       };
 
-      init.defaultBranch = "master";
+      init.defaultBranch = "main";
       push.default = "current";
 
       rebase = {
