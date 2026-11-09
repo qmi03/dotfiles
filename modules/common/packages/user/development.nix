@@ -11,9 +11,9 @@
     cmake
     scrcpy
     android-tools
-    qemu
     silicon
     forgejo-runner
+    libretranslate
 
     # Terminal Utilities
     bat
@@ -44,6 +44,7 @@
     go
 
     ## C/C++/Python
+    uv
 
     ## Javascript
     nodejs

@@ -7,5 +7,6 @@
     obsidian
     anki-bin
     signal-desktop
+    firefox
   ];
 }

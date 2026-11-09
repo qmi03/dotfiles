@@ -20,8 +20,7 @@
 
     # Development
     "ghostty"
-    "utm"
-    "godot"
+    "vagrant"
 
     # Network tools
     # "wireshark"

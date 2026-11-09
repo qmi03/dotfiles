@@ -32,6 +32,7 @@
         markdownlint-cli
         texlab
         tailwindcss-language-server
+        harper
         # typst
         tinymist
         typstyle
@@ -55,6 +56,8 @@
         phpactor
         php83Packages.php-cs-fixer
 
+        #ruby
+        rubocop
         # emmet
         emmet-language-server
       ];

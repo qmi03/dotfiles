@@ -16,11 +16,16 @@
     "xcbeautify"
     "mpich"
     "pkg-config"
-    "zig"
+    "zig@0.16"
     "glfw"
     "glm"
     "podman"
+    "kubectl"
+    "minikube"
+    "qemu"
+    "socket_vmnet"
     "openjdk@21"
+    "stubby"
 
     # Database
     # "postgresql@17"
@@ -40,7 +45,6 @@
     # "mpv"
     # "imagemagick"
     "ffmpeg"
-    "yt-dlp"
 
     # Others
     "pkhex-cli"
