@@ -24,6 +24,9 @@
         autostash = true;
         autosquash = true;
       };
+      commit = {
+        template = "~/.config/git/commit-template";
+      };
     };
 
     ignores = [
